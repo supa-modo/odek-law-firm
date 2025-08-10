@@ -38,8 +38,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-14">
+    <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-14">
         <div className="flex justify-between items-center h-[4.6rem]">
           {/* Logo */}
           <div className="flex items-center">
@@ -119,20 +119,24 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+          <div className="md:hidden absolute top-full px-2 left-0 right-0 bg-white shadow-xl border-t z-40">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
             </div>
-            <button className="mb-3 bg-primary-500 text-white px-6 py-2 font-garamond text-lg hover:opacity-90 transition-opacity font-medium w-full mt-2">
-              <span className="font-medium">Free Consultations</span>
+            <button className="mb-3 bg-primary-500 text-white px-6 py-2 font-garamond text-lg group hover:opacity-90 transition-opacity font-medium w-full mt-2">
+              <div className="flex items-center gap-2 justify-center">
+                <span className="font-medium">Free Consultations</span>
+                <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
             </button>
           </div>
         )}

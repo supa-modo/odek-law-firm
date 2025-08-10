@@ -58,3 +58,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure all sections take full width without overflow */
+section {
+  width: 100%;
+  max-width: 100vw;
+}

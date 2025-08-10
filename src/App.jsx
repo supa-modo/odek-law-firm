@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 // Main App Component
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full overflow-x-hidden">
       <Header />
       <HeroSection />
       <AboutSection />
