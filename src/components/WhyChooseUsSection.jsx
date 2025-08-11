@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TbMinus, TbPlus } from "react-icons/tb";
+import { motion, AnimatePresence } from "framer-motion";
 
 const WhyChooseUsSection = () => {
   const [openSection, setOpenSection] = useState(0);
@@ -61,7 +62,7 @@ const WhyChooseUsSection = () => {
 
             {/* Main Heading */}
             <div className="relative">
-              <div className="absolute left-0 top-0 w-1 h-16 bg-secondary-500"></div>
+              <div className="absolute left-0 top-0 w-1 h-12 bg-secondary-500"></div>
               <h2 className="text-4xl font-bold text-white leading-tight pl-8">
                 What Makes Us Different?
               </h2>
@@ -94,9 +95,11 @@ const WhyChooseUsSection = () => {
                 className="border-b border-slate-300/30 last:border-b-0 bg-white/5 rounded-lg mb-2"
               >
                 {/* Section Header */}
-                <button
+                <motion.button
                   onClick={() => toggleSection(index)}
-                  className="w-full py-4 px-4 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-200 rounded-lg"
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-4 px-4 text-left flex items-center justify-between rounded-lg accordion-item-hover"
                 >
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary-400 rotate-45"></div>
@@ -104,29 +107,43 @@ const WhyChooseUsSection = () => {
                       {section.title}
                     </h3>
                   </div>
+
                   <div className="flex-shrink-0">
-                    {openSection === index ? (
-                      <TbMinus className="w-5 h-5 text-secondary-400" />
-                    ) : (
-                      <TbPlus className="w-5 h-5 text-secondary-400" />
-                    )}
+                    <motion.div
+                      animate={{ rotate: openSection === index ? 180 : 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      {openSection === index ? (
+                        <TbMinus className="w-5 h-5 text-secondary-400" />
+                      ) : (
+                        <TbPlus className="w-5 h-5 text-secondary-400" />
+                      )}
+                    </motion.div>
                   </div>
-                </button>
+                </motion.button>
 
                 {/* Expandable Content */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openSection === index
-                      ? "max-h-48 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="pb-4 pl-5 px-4">
-                    <p className="text-sm text-slate-200 leading-relaxed">
-                      {section.content}
-                    </p>
-                  </div>
-                </div>
+                <AnimatePresence mode="wait">
+                  {openSection === index && (
+                    <motion.div
+                      key={index}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        height: { duration: 0.4, ease: "easeInOut" },
+                        opacity: { duration: 0.3, ease: "easeInOut" },
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pb-4 pl-5 px-4">
+                        <p className="text-sm text-slate-200 leading-relaxed">
+                          {section.content}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>

@@ -76,10 +76,10 @@ section {
   from {
     max-height: 0;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
-    max-height: 200px;
+    max-height: 400px;
     opacity: 1;
     transform: translateY(0);
   }
@@ -87,21 +87,39 @@ section {
 
 @keyframes slideUp {
   from {
-    max-height: 200px;
+    max-height: 400px;
     opacity: 1;
     transform: translateY(0);
   }
   to {
     max-height: 0;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
-.accordion-enter {
-  animation: slideDown 0.3s ease-out forwards;
+/* Smooth accordion transitions */
+.accordion-smooth {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-exit {
-  animation: slideUp 0.3s ease-in forwards;
+.accordion-smooth.expanded {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordion-smooth.collapsed {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* Enhanced hover effects for accordion items */
+.accordion-item-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion-item-hover:hover {
+  transform: translateX(4px);
 }
