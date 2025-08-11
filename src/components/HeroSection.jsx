@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[80vh] flex items-center overflow-hidden pt-[4.6rem]"
+      className="relative h-[82vh] flex items-center overflow-hidden pt-[4.6rem]"
     >
       {/* Background Image */}
       <div
@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-[90%] mx-auto md:px-6 lg:px-10 w-full">
+      <div className="relative z-20 max-w-[95%] lg:max-w-[90%] mx-auto md:px-6 lg:px-10 w-full">
         <div className=" h-full py-12">
           {/* Left Side - Text Content */}
           <div className="text-left">
@@ -58,14 +58,14 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex gap-4">
-              <button className="bg-secondary-700 hover:bg-secondary-800 group text-white px-4 md:px-8 py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-secondary-600/30">
+              <button className="bg-secondary-700 hover:bg-secondary-800 group text-white px-4 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-secondary-600/30">
                 <span className="flex items-center justify-center gap-3">
                   <TbPhoneCall className="w-5 h-5 hidden md:block" />
                   <span className="">Book an Appointment</span>
                   <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </button>
-              <button className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-6 md:px-8 py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform backdrop-blur-sm">
+              <button className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-6 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform backdrop-blur-sm">
                 <span className="flex items-center justify-center gap-3">
                   <span className="hidden md:block">Explore Our Services</span>
                   <span className="block md:hidden">Our Services</span>
