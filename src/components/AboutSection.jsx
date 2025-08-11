@@ -59,7 +59,7 @@ const AboutSection = () => {
     },
     {
       icon: TbBuildingBank,
-      title: "Banking & Finance Law",
+      title: "Banking & Financial Law",
       description:
         "Banking and finance law expertise including loan agreements, credit facilities, and financial transactions with a focus on securing favorable terms and protecting client interests.",
     },
@@ -79,7 +79,7 @@ const AboutSection = () => {
                 Practice Areas
               </h2>
               <div className="h-1 w-20 bg-secondary-700 mb-4 lg:mb-6"></div>
-              <p className="text-base md:text-lg text-slate-600 font-medium">
+              <p className="text-base md:text-lg lg:text-2xl text-slate-600 font-medium">
                 Comprehensive legal expertise across all major practice areas,
                 delivering innovative solutions and trusted advice for our
                 clients.
@@ -114,7 +114,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-500 font-medium text-sm md:text-base lg:text-lg">
+                  <p className="text-slate-500 font-medium text-sm md:text-base lg:text-xl">
                     {area.description}
                   </p>
                 </div>

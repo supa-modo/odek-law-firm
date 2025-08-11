@@ -1,5 +1,5 @@
 Website Development Proposal
-For: [Odek & Associates LLC] – Kenya
+For: [Obel & Company Associates] – Kenya
 Prepared by: [Your Name / Company]
 Date: [Insert Date]
 

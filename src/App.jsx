@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
+import WhyChooseUsSection from "./components/WhyChooseUsSection";
+import NewsInsightsSection from "./components/NewsInsightsSection";
 import TeamSection from "./components/TeamSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -23,7 +25,8 @@ function App() {
             <HeroSection />
             <AboutSection />
             <ServicesSection />
-            <TeamSection />
+            <WhyChooseUsSection />
+            <NewsInsightsSection />
             <ContactSection />
             <Footer />
           </div>

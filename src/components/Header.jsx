@@ -1,10 +1,38 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { TbArrowRight } from "react-icons/tb";
+import { TbArrowRight, TbChevronDown } from "react-icons/tb";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false);
   const location = useLocation();
+
+  const practiceAreas = [
+    {
+      to: "/practice-areas#corporate",
+      label: "Corporate & Commercial",
+    },
+    {
+      to: "/practice-areas#real-estate",
+      label: "Real Estate & Property",
+    },
+    {
+      to: "/practice-areas#employment",
+      label: "Employment & Labour",
+    },
+    {
+      to: "/practice-areas#family",
+      label: "Family Law & Succession",
+    },
+    {
+      to: "/practice-areas#criminal",
+      label: "Criminal Law & Litigation",
+    },
+    {
+      to: "/practice-areas#banking",
+      label: "Banking & Financial",
+    },
+  ];
 
   const navigationItems = [
     {
@@ -39,12 +67,12 @@ const Header = () => {
               <Link to="/" className="flex items-center">
                 <img
                   src="/scales.jpg"
-                  alt="Odek & Associates"
+                  alt="Obel & Company Associates"
                   className="w-14 lg:w-16 h-14 lg:h-16 mr-2"
                 />
                 <div>
                   <h1 className="text-xl lg:text-2xl font-bold font-garamond text-secondary-800">
-                    Odek & Associates
+                    Obel & Company Associates
                   </h1>
                   <p className="-mt-1 text-sm lg:text-[0.97rem] text-navy font-medium leading-tight">
                     Advocates & Solicitors
@@ -56,7 +84,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <div className="ml-10 flex items-center font-outfit uppercase text-[0.93rem] space-x-4">
+            <div className="ml-10 flex items-center font-outfit uppercase text-[0.93rem] space-x-3">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={item.to}>
                   {item.to.startsWith("/#") ? (
@@ -69,6 +97,42 @@ const Header = () => {
                         className={`absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-700 group-hover:w-full transition-all duration-200 ease-out`}
                       ></div>
                     </a>
+                  ) : item.label === "Practice Areas" ? (
+                    <div
+                      className="relative group"
+                      onMouseEnter={() => setIsPracticeAreasOpen(true)}
+                      onMouseLeave={() => setIsPracticeAreasOpen(false)}
+                    >
+                      <button className="text-gray-500 hover:text-primary-600 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
+                        {item.label}
+                        <TbChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                      </button>
+
+                      {/* Dropdown Menu */}
+                      {isPracticeAreasOpen && (
+                        <div className="absolute top-full left-0 mt-1 w-80 bg-white shadow-xl border border-slate-200 py-2 z-50">
+                          {practiceAreas.map((area, areaIndex) => (
+                            <Link
+                              key={areaIndex}
+                              to={area.to}
+                              className="block px-4 py-3 hover:bg-slate-50 transition-colors duration-150 group/item"
+                              onClick={() => setIsPracticeAreasOpen(false)}
+                            >
+                              <div className="flex items-start justify-between">
+                                <div className="flex-1">
+                                  <div className="font-semibold text-slate-800 group-hover/item:text-secondary-700 transition-colors duration-150">
+                                    {area.label}
+                                  </div>
+                                </div>
+                                <div className="text-slate-400 group-hover/item:text-secondary-600 transition-colors duration-150">
+                                  →
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ) : (
                     <Link
                       to={item.to}
@@ -104,7 +168,7 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 p-1.5 rounded-md"
+              className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 p-1.5 rounded-sm"
             >
               <svg
                 className="h-7 w-7"
@@ -141,6 +205,41 @@ const Header = () => {
                   >
                     {item.label}
                   </a>
+                ) : item.label === "Practice Areas" ? (
+                  <div key={item.to}>
+                    <button
+                      className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
+                      onClick={() =>
+                        setIsPracticeAreasOpen(!isPracticeAreasOpen)
+                      }
+                    >
+                      {item.label}
+                      <TbChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isPracticeAreasOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile Dropdown */}
+                    {isPracticeAreasOpen && (
+                      <div className="ml-4 mt-2 space-y-1 border-l-2 border-secondary-600/70 pl-4">
+                        {practiceAreas.map((area, areaIndex) => (
+                          <Link
+                            key={areaIndex}
+                            to={area.to}
+                            className="text-gray-600 hover:text-gray-800 block px-3 py-2 text-sm font-medium"
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setIsPracticeAreasOpen(false);
+                            }}
+                          >
+                            {area.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <Link
                     key={item.to}

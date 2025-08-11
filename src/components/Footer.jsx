@@ -13,14 +13,14 @@ const Footer = () => {
               <div className="flex items-center justify-center rounded-full py-1.5 px-2 bg-white">
                 <img
                   src="/scales.jpg"
-                  alt="Odek & Associates"
+                  alt="Obel & Company Associates"
                   className="w-10 lg:w-16 h-10 lg:h-16"
                 />
               </div>
 
               <div className="ml-4">
                 <h3 className="text-2xl leading-tight text-secondary-600 font-bold">
-                  Odek & Associates
+                  Obel & Company Associates
                 </h3>
                 <p className="text-gray-400 font-medium">
                   Advocates & Solicitors
@@ -149,7 +149,7 @@ const Footer = () => {
               {/* Message Textarea */}
               <div>
                 <textarea
-                  placeholder="Your message..."
+                  placeholder="Leave us a message..."
                   className="w-full h-24 px-4 py-3 bg-primary-700 border border-primary-600    text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent resize-none transition-all duration-300"
                 ></textarea>
               </div>
@@ -175,8 +175,8 @@ const Footer = () => {
         {/* Bottom Border and Copyright */}
         <div className="border-t border-primary-600 mt-12 pt-8 text-center">
           <p className="text-gray-400 font-medium">
-            &copy; {new Date().getFullYear()} Odek & Associates LLC. All rights
-            reserved. | Advocates & Solicitors of the High Court of Kenya
+            &copy; {new Date().getFullYear()} Obel & Company Associates. All
+            rights reserved. | Advocates & Solicitors of the High Court of Kenya
           </p>
         </div>
       </div>
