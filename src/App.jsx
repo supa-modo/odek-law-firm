@@ -11,37 +11,41 @@ import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 import PracticeAreasPage from "./pages/PracticeAreasPage";
 import LegalTeamPage from "./pages/LegalTeamPage";
+import { Analytics } from "@vercel/analytics/react";
 
 // Main App Component
 function App() {
   return (
-    <Routes>
-      {/* Home Page */}
-      <Route
-        path="/"
-        element={
-          <div className="w-full overflow-x-hidden">
-            <Header />
-            <HeroSection />
-            <AboutSection />
-            <ServicesSection />
-            <WhyChooseUsSection />
-            <NewsInsightsSection />
-            <ContactSection />
-            <Footer />
-          </div>
-        }
-      />
+    <>
+      <Analytics />
+      <Routes>
+        {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <div className="w-full overflow-x-hidden">
+              <Header />
+              <HeroSection />
+              <AboutSection />
+              <ServicesSection />
+              <WhyChooseUsSection />
+              <NewsInsightsSection />
+              <ContactSection />
+              <Footer />
+            </div>
+          }
+        />
 
-      {/* About Page */}
-      <Route path="/about" element={<AboutPage />} />
+        {/* About Page */}
+        <Route path="/about" element={<AboutPage />} />
 
-      {/* Practice Areas Page */}
-      <Route path="/practice-areas" element={<PracticeAreasPage />} />
+        {/* Practice Areas Page */}
+        <Route path="/practice-areas" element={<PracticeAreasPage />} />
 
-      {/* Legal Team Page */}
-      <Route path="/legal-team" element={<LegalTeamPage />} />
-    </Routes>
+        {/* Legal Team Page */}
+        <Route path="/legal-team" element={<LegalTeamPage />} />
+      </Routes>
+    </>
   );
 }
 
