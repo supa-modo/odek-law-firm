@@ -121,7 +121,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[82vh] flex items-center overflow-hidden pt-[4.6rem]"
+      className="relative h-[75vh] md:h-[82vh] flex items-center overflow-hidden pt-[4.6rem]"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -323,10 +323,10 @@ const HeroSection = () => {
             >
               {/* Simple Indicator */}
               <motion.div
-                className={`w-3 h-3 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
+                className={` rounded-full transition-all duration-500 ${
                   currentSlide === index
-                    ? "bg-secondary-500 scale-125 shadow-lg"
-                    : "bg-white/30 backdrop-blur-sm border border-white/20"
+                    ? "bg-secondary-500 scale-125 shadow-lg w-4 md:w-5 h-1.5 md:h-2.5"
+                    : "bg-white/30 backdrop-blur-sm border border-white/20 w-2 md:w-3 h-2 md:h-3"
                 }`}
               />
 
