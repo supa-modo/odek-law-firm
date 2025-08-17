@@ -80,7 +80,7 @@ const NewsInsightsSection = () => {
   const visiblePosts = blogPosts.slice(currentIndex, currentIndex + 3);
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white relative">
+    <section className=" py-16 md:py-20 lg:py-24 bg-white relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -92,7 +92,7 @@ const NewsInsightsSection = () => {
         ></div>
       </div>
 
-      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-12 lg:gap-16 items-start">
           {/* Left Column - Newsletter Subscription (30% width) */}
           <div className="lg:col-span-3 relative">
@@ -171,7 +171,7 @@ const NewsInsightsSection = () => {
               </div>
 
               {/* Blog Posts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 px-0 md:px-3 lg:px-12">
                 {visiblePosts.map((post, index) => (
                   <article
                     key={post.id}
@@ -200,18 +200,20 @@ const NewsInsightsSection = () => {
                             It all begins with an idea.
                           </p>
 
-                          {/* Read More Link */}
-                          <div className="pt-1">
-                            <span className="inline-flex items-center text-slate-800 font-semibold text-xs group-hover:text-secondary-600 transition-colors duration-200">
-                              Read More →
-                            </span>
-                          </div>
+                          <div className="flex justify-between">
+                            {/* Read More Link */}
+                            <div className="pt-1">
+                              <span className="inline-flex items-center text-slate-800 font-semibold text-xs group-hover:text-secondary-600 transition-colors duration-200">
+                                Read More →
+                              </span>
+                            </div>
 
-                          {/* Date */}
-                          <div className="pt-1">
-                            <span className="text-xs text-slate-500">
-                              {post.date}
-                            </span>
+                            {/* Date */}
+                            <div className="pt-1">
+                              <span className="text-xs text-slate-500">
+                                {post.date}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -19,7 +19,7 @@ const ContactSection = () => {
               Contact Information
             </h3>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mr-4">
                   <svg

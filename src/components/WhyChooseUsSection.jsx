@@ -49,10 +49,10 @@ const WhyChooseUsSection = () => {
         ></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left Column - Main Content */}
-          <div className="space-y-6">
+          <div className="lg:max-w-[40%] space-y-6">
             {/* Top Label */}
             <div>
               <span className="text-sm font-bold uppercase tracking-wider text-secondary-300">
@@ -63,7 +63,7 @@ const WhyChooseUsSection = () => {
             {/* Main Heading */}
             <div className="relative">
               <div className="absolute left-0 top-0 w-1 h-12 bg-secondary-500"></div>
-              <h2 className="text-4xl font-bold text-white leading-tight pl-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight pl-8">
                 What Makes Us Different?
               </h2>
             </div>
@@ -81,14 +81,14 @@ const WhyChooseUsSection = () => {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 rounded font-semibold text-base transition-colors duration-200 shadow-lg hover:shadow-xl">
+              <button className="w-full hover:cursor-pointer bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 font-semibold text-base transition-colors duration-200 shadow-lg hover:shadow-xl">
                 TALK TO A LAWYER
               </button>
             </div>
           </div>
 
           {/* Right Column - Expandable Sections */}
-          <div className="space-y-0">
+          <div className="flex-1 space-y-0">
             {sections.map((section, index) => (
               <div
                 key={index}
