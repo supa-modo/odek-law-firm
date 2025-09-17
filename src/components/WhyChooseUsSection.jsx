@@ -52,10 +52,10 @@ const WhyChooseUsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left Column - Main Content */}
-          <div className="lg:max-w-[40%] space-y-6">
+          <div className="lg:max-w-[43%] space-y-6">
             {/* Top Label */}
             <div>
-              <span className="text-sm font-bold uppercase tracking-wider text-secondary-300">
+              <span className="text-sm md:text-[0.9rem] lg:text-[1.1rem] font-bold uppercase tracking-wider text-secondary-300">
                 A LAW FIRM YOU CAN TRUST
               </span>
             </div>
@@ -63,13 +63,13 @@ const WhyChooseUsSection = () => {
             {/* Main Heading */}
             <div className="relative">
               <div className="absolute left-0 top-0 w-1 h-12 bg-secondary-500"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight pl-8">
+              <h2 className="text-3xl md:text-4xl lg:text-[2.7rem] font-bold text-white leading-tight pl-8">
                 What Makes Us Different?
               </h2>
             </div>
 
             {/* Description */}
-            <div className="space-y-4 text-base text-slate-200 leading-relaxed">
+            <div className="space-y-4 text-lg lg:text-xl text-slate-200 leading-relaxed">
               <p>
                 Our goal is to uphold the principles of justice and fairness
                 while advocating for the best interests of those we represent.cl
@@ -103,7 +103,7 @@ const WhyChooseUsSection = () => {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary-400 rotate-45"></div>
-                    <h3 className="text-base font-semibold text-white">
+                    <h3 className="text-lg lg:text-xl font-semibold text-white">
                       {section.title}
                     </h3>
                   </div>
@@ -137,7 +137,7 @@ const WhyChooseUsSection = () => {
                       className="overflow-hidden"
                     >
                       <div className="pb-4 pl-5 px-4">
-                        <p className="text-sm text-slate-200 leading-relaxed">
+                        <p className="text-[1.1rem] lg:text-[1.2rem] text-slate-200 leading-relaxed">
                           {section.content}
                         </p>
                       </div>

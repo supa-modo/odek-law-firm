@@ -9,12 +9,12 @@ const ServicesSection = () => {
           {/* Left Column - Main Message */}
           <div className="lg:col-span-2">
             <div className="sticky top-24">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-700 mb-6 md:mb-6 leading-tight font-garamond">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-700 mb-4 md:mb-6 leading-tight font-garamond">
                 Your Legal Rights Matter. We're Here to Protect Them.
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-slate-600">
-                <p className="text-base md:text-lg lg:text-2xl leading-relaxed">
+                <p className="text-[1.1rem] lg:text-2xl leading-relaxed">
                   Whether you're a business owner navigating corporate
                   regulations, an individual facing legal challenges, or a
                   family dealing with sensitive matters, we provide expert
@@ -24,10 +24,10 @@ const ServicesSection = () => {
                 </p>
               </div>
 
-              <div className="mt-8 md:mt-10">
+              <div className="mt-8">
                 <a
                   href="#contact"
-                  className="inline-flex items-center text-red-600 hover:text-secondary-700 font-bold text-sm md:text-base lg:text-xl uppercase tracking-wide group transition-colors duration-300"
+                  className="inline-flex items-center text-red-600 hover:text-secondary-700 font-bold text-base lg:text-xl uppercase tracking-wide group transition-colors duration-300"
                 >
                   <span className="underline underline-offset-4">
                     NEED LEGAL ADVICE? CONTACT US.
@@ -37,7 +37,7 @@ const ServicesSection = () => {
                   </span>
                 </a>
 
-                <p className="text-sm md:text-base lg:text-2xl text-slate-600 mt-3 leading-">
+                <p className="text-[1.1rem] lg:text-2xl text-slate-600 mt-3 leading-">
                   Legal matters can be complex and overwhelming. Our team is
                   here to guide you through every step, ensuring your rights are
                   protected and your interests are served.

@@ -46,6 +46,13 @@ const AboutSection = () => {
         "Full-service corporate legal support including business formation, mergers & acquisitions, corporate governance, and commercial litigation.",
     },
     {
+      icon: TbBuildingBank,
+      title: "Banking & Financial Law",
+      description:
+        "Banking and finance law expertise including loan agreements, credit facilities, and financial transactions with a focus on securing favorable terms and protecting client interests.",
+    },
+    ,
+    {
       icon: GiHandcuffs,
       title: "Criminal Law",
       description:
@@ -56,12 +63,6 @@ const AboutSection = () => {
       title: "Family Law",
       description:
         "Comprehensive family law services including divorce, child custody, and property division with a focus on preserving family relationships and minimizing conflict.",
-    },
-    {
-      icon: TbBuildingBank,
-      title: "Banking & Financial Law",
-      description:
-        "Banking and finance law expertise including loan agreements, credit facilities, and financial transactions with a focus on securing favorable terms and protecting client interests.",
     },
   ];
 
@@ -79,7 +80,7 @@ const AboutSection = () => {
                 Practice Areas
               </h2>
               <div className="h-1 w-20 bg-secondary-700 mb-4 lg:mb-6"></div>
-              <p className="text-base md:text-lg lg:text-2xl text-slate-600 font-medium">
+              <p className="text-lg lg:text-2xl text-slate-600 font-medium">
                 Comprehensive legal expertise across all major practice areas,
                 delivering innovative solutions and trusted advice for our
                 clients.
@@ -100,7 +101,7 @@ const AboutSection = () => {
           <div className="lg:col-span-4">
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 space-y-10 lg:space-y-16 space-x-2 md:space-x-4 lg:space-x-10">
               {practiceAreas.map((area, index) => (
-                <div key={index} className=" group">
+                <div key={index} className=" group border-r border-slate-200">
                   {/* Icon and Title Row */}
                   <div className="flex items-start space-x-3 md:space-x-4 mb-4">
                     <div className="flex-shrink-0">
@@ -114,7 +115,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-500 font-medium text-sm md:text-base lg:text-xl">
+                  <p className="text-slate-600 text-lg lg:text-[1.35rem]">
                     {area.description}
                   </p>
                 </div>
