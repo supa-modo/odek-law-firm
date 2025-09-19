@@ -34,14 +34,14 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="pt-16 md:pt-20 lg:pt-24 bg-gradient-to-br from-slate-50 to-slate-100 relative"
+      className="pt-16 md:pt-20 lg:pt-24 bg-gradient-to-br from-slate-100 to-slate-200 relative"
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(/documents.png)",
+            backgroundImage: "url(/hammer.jpg)",
             filter: "blur(2px)",
           }}
         ></div>

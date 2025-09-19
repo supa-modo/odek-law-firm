@@ -2,12 +2,12 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-10 bg-gradient-to-br from-slate-100 to-slate-50"
+      className="pt-10 md:py-10 bg-gradient-to-br from-slate-100 to-slate-50"
     >
-      <div className="max-w-screen-2xl mx-auto px-1">
+      <div className="max-w-screen-2xl mx-auto ">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Left Column - Main Message */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 px-3 lg:px-0">
             <div className="sticky top-24">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-700 mb-4 md:mb-6 leading-tight font-garamond">
                 Your Legal Rights Matter. We're Here to Protect Them.

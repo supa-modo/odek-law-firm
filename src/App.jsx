@@ -33,7 +33,7 @@ function App() {
               <WhyChooseUsSection />
               <ClientSuccessSection />
               <NewsInsightsSection />
-              <LegalResourcesSection />
+              {/* <LegalResourcesSection /> */}
               <ContactSection />
               <Footer />
             </div>
