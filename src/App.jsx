@@ -7,6 +7,8 @@ import WhyChooseUsSection from "./components/WhyChooseUsSection";
 import NewsInsightsSection from "./components/NewsInsightsSection";
 import TeamSection from "./components/TeamSection";
 import ContactSection from "./components/ContactSection";
+import ClientSuccessSection from "./components/ClientSuccessSection";
+import LegalResourcesSection from "./components/LegalResourcesSection";
 import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 import PracticeAreasPage from "./pages/PracticeAreasPage";
@@ -29,7 +31,9 @@ function App() {
               <AboutSection />
               <ServicesSection />
               <WhyChooseUsSection />
+              <ClientSuccessSection />
               <NewsInsightsSection />
+              <LegalResourcesSection />
               <ContactSection />
               <Footer />
             </div>

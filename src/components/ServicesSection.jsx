@@ -14,7 +14,7 @@ const ServicesSection = () => {
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-slate-600">
-                <p className="text-[1.1rem] lg:text-2xl leading-relaxed">
+                <p className="text-[1.15rem] lg:text-2xl leading-relaxed">
                   Whether you're a business owner navigating corporate
                   regulations, an individual facing legal challenges, or a
                   family dealing with sensitive matters, we provide expert
@@ -37,7 +37,7 @@ const ServicesSection = () => {
                   </span>
                 </a>
 
-                <p className="text-[1.1rem] lg:text-2xl text-slate-600 mt-3 leading-">
+                <p className="text-[1.15rem] lg:text-2xl text-slate-600 mt-3 leading-">
                   Legal matters can be complex and overwhelming. Our team is
                   here to guide you through every step, ensuring your rights are
                   protected and your interests are served.
