@@ -22,12 +22,12 @@ const Footer = () => {
                 <h3 className="text-2xl leading-tight text-secondary-600 font-bold">
                   Obel & Company Associates
                 </h3>
-                <p className="text-gray-400 font-medium">
+                <p className="text-[1.1rem] lg:text-[1.15rem] text-gray-400 font-medium">
                   Advocates & Solicitors
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 font-medium lg:text-lg leading-tight mb-6 max-w-md">
+            <p className="text-gray-400 font-medium text-[1.1rem] lg:text-[1.15rem] leading-tight mb-6 max-w-md">
               Providing exceptional legal services with integrity, expertise,
               and unwavering commitment to our clients' success.
             </p>
@@ -58,10 +58,10 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-8">
               {/* Quick Links */}
               <div>
-                <h4 className="text-lg font-semibold mb-6 text-secondary-200">
+                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
                   Quick Links
                 </h4>
-                <ul className="space-y-3">
+                <ul className="space-y-2 lg:space-y-3 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
                       href="#home"
@@ -99,10 +99,10 @@ const Footer = () => {
 
               {/* Legal */}
               <div>
-                <h4 className="text-lg font-semibold mb-6 text-secondary-200">
+                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
                   Legal
                 </h4>
-                <ul className="space-y-3">
+                <ul className="space-y-2 lg:space-y-3 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
                       href="#"
@@ -142,7 +142,7 @@ const Footer = () => {
 
           {/* Contact Form - Full width on mobile, 4 columns on desktop */}
           <div className="lg:col-span-4">
-            <h4 className="text-lg font-semibold mb-4 text-secondary-200">
+            <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
               Get In Touch
             </h4>
             <form className="space-y-2">
@@ -150,7 +150,7 @@ const Footer = () => {
               <div>
                 <textarea
                   placeholder="Leave us a message..."
-                  className="w-full h-24 px-4 py-3 bg-primary-700 border border-primary-600    text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent resize-none transition-all duration-300"
+                  className="w-full h-24 px-4 py-3 bg-primary-700 border border-primary-600 text-lg   text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent resize-none transition-all duration-300"
                 ></textarea>
               </div>
 
@@ -159,13 +159,13 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Email or Phone"
-                  className="flex-1 px-4 py-2 bg-primary-700 border border-primary-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all duration-300"
+                  className="flex-1 px-4 py-2 text-lg bg-primary-700 border border-primary-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all duration-300"
                 />
                 <button
                   type="submit"
-                  className="w-1/5 bg-secondary-600 hover:bg-secondary-700 text-white px-4 py-2 font-semibold transition-all duration-300 flex items-center justify-center "
+                  className="w-1/5 text-lg bg-secondary-600 hover:bg-secondary-700 text-white px-4 py-2 font-semibold transition-all duration-300 flex items-center justify-center "
                 >
-                  <TbSend className="hidden md:block w-5 h-5 mr-2" /> Send
+                  <TbSend size={20} className="hidden md:block mr-2" /> Send
                 </button>
               </div>
             </form>

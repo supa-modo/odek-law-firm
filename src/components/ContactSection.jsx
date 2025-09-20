@@ -6,6 +6,7 @@ import {
   TbMapPin,
   TbClock,
   TbArrowRight,
+  TbMailFilled,
 } from "react-icons/tb";
 
 const ContactSection = () => {
@@ -81,8 +82,8 @@ const ContactSection = () => {
 
                 <div className="space-y-2 md:space-y-3 lg:space-y-5">
                   {/* Address */}
-                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-slate-200/50 ">
-                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 rounded-lg flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
+                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm border border-slate-200/50 ">
+                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
                       <PiMapPinAreaDuotone className="w-6 h-6 text-secondary-700" />
                     </div>
                     <div>
@@ -101,8 +102,8 @@ const ContactSection = () => {
                   </div>
 
                   {/* Phone */}
-                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-slate-200/50 ">
-                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 rounded-lg flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
+                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm border border-slate-200/50 ">
+                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
                       <TbPhoneCall className="w-6 h-6 text-secondary-700" />
                     </div>
                     <div>
@@ -118,9 +119,9 @@ const ContactSection = () => {
                   </div>
 
                   {/* Email */}
-                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-slate-200/50 ">
-                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 rounded-lg flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
-                      <TbMail className="w-6 h-6 text-secondary-700" />
+                  <div className="group flex items-start space-x-4 p-4 bg-white/50 backdrop-blur-sm border border-slate-200/50 ">
+                    <div className="flex-shrink-0 w-12 h-12 bg-secondary-700/10 flex items-center justify-center group-hover:bg-secondary-700/20 transition-colors">
+                      <TbMailFilled className="w-6 h-6 text-secondary-700" />
                     </div>
                     <div>
                       <h4 className="text-lg lg:text-xl font-bold text-slate-800 mb-1">
@@ -139,7 +140,7 @@ const ContactSection = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white/70 backdrop-blur-sm rounded-lg border border-slate-200/50 p-3 md:p-4 lg:p-8 shadow-lg">
+              <div className="bg-white/70 backdrop-blur-sm border border-slate-200/50 p-3 md:p-4 lg:p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-slate-800 mb-8 relative px-3 pt-4 lg:px-0 lg:pt-0">
                   <span className="relative">
                     Send us a Message
@@ -162,7 +163,7 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
+                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
                         placeholder="Your full name"
                       />
                     </div>
@@ -177,7 +178,7 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
+                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -190,7 +191,7 @@ const ContactSection = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
+                        className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
                         placeholder="+254 700 000 000"
                       />
                     </div>
@@ -205,7 +206,7 @@ const ContactSection = () => {
                       value={formData.legalMatter}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
+                      className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors bg-white/80 backdrop-blur-sm"
                     >
                       <option value="">Select a practice area</option>
                       <option value="civil-law">Civil Law</option>
@@ -236,14 +237,14 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors resize-none bg-white/80 backdrop-blur-sm"
+                      className="w-full px-4 py-3 text-lg lg:text-[1.15rem] font-semibold placeholder:font-normal border border-slate-300 focus:outline-none focus:ring-1 focus:ring-burgundy/80 focus:border-burgundy/80 transition-colors resize-none bg-white/80 backdrop-blur-sm"
                       placeholder="Please describe your legal matter or questions in detail..."
                     ></textarea>
                   </div>
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-burgundy/80 hover:bg-burgundy text-white px-8 py-2.5 md:py-3 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group"
+                      className="w-full bg-burgundy/80 hover:bg-burgundy text-white px-8 py-2.5 md:py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group"
                     >
                       <span className="flex items-center justify-center gap-3">
                         <TbPhoneCall className="w-5 h-5" />

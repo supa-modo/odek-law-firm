@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { TbArrowRight, TbArrowLeft } from "react-icons/tb";
+import {
+  TbArrowRight,
+  TbArrowLeft,
+  TbChevronLeft,
+  TbChevronRight,
+} from "react-icons/tb";
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const NewsInsightsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   const blogPosts = [
     {
@@ -140,7 +158,7 @@ const NewsInsightsSection = () => {
 
   return (
     <section
-      className="py-16 md:py-20 lg:py-24 bg-secondary-700 relative"
+      className="py-10 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200  relative"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -163,15 +181,15 @@ const NewsInsightsSection = () => {
               {/* Heading */}
               <div className="space-y-4">
                 <div>
-                  <span className="font-bold uppercase tracking-wider text-slate-700">
+                  <span className="font-semibold uppercase tracking-wider text-slate-700">
                     THE LATEST
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+                  <div className="w-1 h-10 bg-burgundy/80"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                     News
                   </h2>
-                  <div className="w-1 h-8 bg-secondary-500"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
                     + Insights
                   </h2>
@@ -191,9 +209,9 @@ const NewsInsightsSection = () => {
                   <input
                     type="email"
                     placeholder="Your Email Address"
-                    className="flex-1 px-3 py-2 border border-slate-300 rounded focus:ring-1 focus:ring-secondary-500 focus:border-transparent outline-none transition-all duration-200"
+                    className="flex-1 px-3 py-2 lg:py-2.5 text-lg lg:text-[1.15rem] font-semibold border border-slate-300  focus:ring-1 focus:border-burgundy focus:ring-burgundy focus:outline-none transition-all duration-200"
                   />
-                  <button className="bg-slate-800 hover:bg-slate-900 text-white px-6 py-2 rounded font-semibold transition-colors duration-200">
+                  <button className="bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2  font-semibold transition-colors duration-200">
                     SIGN UP
                   </button>
                 </div>
@@ -205,7 +223,7 @@ const NewsInsightsSection = () => {
           <div className="lg:col-span-6">
             <div className="relative">
               {/* Desktop Navigation Arrows */}
-              <div className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10">
+              <div className="hidden lg:flex absolute -left-10 top-1/2 -translate-y-1/2 z-10">
                 <button
                   onClick={previousArticle}
                   disabled={currentIndex === 0}
@@ -217,18 +235,18 @@ const NewsInsightsSection = () => {
                   onMouseEnter={() => setIsAutoPlaying(false)}
                   onMouseLeave={() => setIsAutoPlaying(true)}
                 >
-                  <TbArrowLeft className="w-6 h-6" />
+                  <TbChevronLeft className="w-6 h-6" />
                 </button>
               </div>
 
-              <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10">
+              <div className="hidden lg:flex absolute -right-10 top-1/2 -translate-y-1/2 z-10">
                 <button
                   onClick={nextArticle}
                   className="p-3 rounded-full shadow-lg transition-all duration-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-secondary-600"
                   onMouseEnter={() => setIsAutoPlaying(false)}
                   onMouseLeave={() => setIsAutoPlaying(true)}
                 >
-                  <TbArrowRight className="w-6 h-6" />
+                  <TbChevronRight className="w-6 h-6" />
                 </button>
               </div>
 
@@ -237,22 +255,24 @@ const NewsInsightsSection = () => {
                 <motion.div
                   className="flex"
                   animate={{
-                    x: -currentIndex * (100 / 3) + "%",
+                    x: `-${currentIndex * (isMobile ? 100 / 6 : 100 / 6)}%`,
                   }}
                   transition={{
                     duration: 0.6,
                     ease: "easeInOut",
                   }}
                   style={{
-                    width: `${(blogPosts.length / 3) * 100}%`,
+                    width: `${
+                      blogPosts.length * (isMobile ? 100 / 1 : 100 / 3)
+                    }%`,
                   }}
                 >
                   {blogPosts.map((post, index) => (
                     <div
                       key={post.id}
-                      className="flex-shrink-0 px-1.5 md:px-2 lg:px-3"
+                      className="flex-shrink-0 px-1.5 md:px-2"
                       style={{
-                        width: `${100 / 3}%`,
+                        width: `${isMobile ? 100 / 6 : 100 / 6}%`,
                       }}
                     >
                       <div className="group cursor-pointer">
@@ -300,28 +320,28 @@ const NewsInsightsSection = () => {
               </div>
 
               {/* Mobile Navigation */}
-              <div className="lg:hidden flex justify-between items-center mt-8 px-4">
+              <div className="lg:hidden flex justify-between items-center mt-4 px-4">
                 <button
                   onClick={previousArticle}
                   disabled={currentIndex === 0}
-                  className={`p-4 rounded-full shadow-lg transition-all duration-200 ${
+                  className={`p-2.5 rounded-full shadow-lg transition-all duration-300 ${
                     currentIndex === 0
                       ? "bg-slate-200 text-slate-400 cursor-not-allowed"
                       : "bg-white text-slate-700 hover:bg-slate-50 hover:text-secondary-600"
                   }`}
                 >
-                  <TbArrowLeft className="w-6 h-6" />
+                  <FaChevronLeft className="w-4 h-4" />
                 </button>
 
                 {/* Position Indicators */}
-                <div className="flex space-x-3">
+                <div className="flex space-x-2">
                   {blogPosts.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => goToSlide(i)}
-                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${
                         currentIndex === i
-                          ? "bg-secondary-600 w-8"
+                          ? "bg-burgundy w-8"
                           : "bg-slate-300 hover:bg-slate-400"
                       }`}
                     />
@@ -330,21 +350,21 @@ const NewsInsightsSection = () => {
 
                 <button
                   onClick={nextArticle}
-                  className="p-4 rounded-full shadow-lg transition-all duration-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-secondary-600"
+                  className="p-2.5 rounded-full shadow-lg transition-all duration-300 bg-white text-slate-700 hover:bg-slate-50 hover:text-secondary-600"
                 >
-                  <TbArrowRight className="w-6 h-6" />
+                  <FaChevronRight className="w-4 h-4" />
                 </button>
               </div>
 
               {/* Desktop Position Indicators */}
-              <div className="hidden lg:flex justify-center mt-8 space-x-3">
+              <div className="hidden lg:flex justify-center mt-8 space-x-2">
                 {blogPosts.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => goToSlide(i)}
                     className={`w-3 h-3 rounded-full transition-all duration-500 ${
                       currentIndex === i
-                        ? "bg-secondary-600 w-8"
+                        ? "bg-burgundy w-8"
                         : "bg-slate-300 hover:bg-slate-400"
                     }`}
                   />
