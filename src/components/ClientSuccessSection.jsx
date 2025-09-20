@@ -12,7 +12,7 @@ import {
 } from "react-icons/tb";
 import { PiBuildingsDuotone } from "react-icons/pi";
 import { GiHandcuffs } from "react-icons/gi";
-import { FaHome } from "react-icons/fa";
+import { FaBalanceScale, FaHandshake, FaHome } from "react-icons/fa";
 
 const ClientSuccessSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -189,8 +189,8 @@ const ClientSuccessSection = () => {
   const achievements = [
     { number: "500+", label: "Cases Won", icon: TbTrophy },
     { number: "98%", label: "Success Rate", icon: TbStar },
-    { number: "15+", label: "Years Experience", icon: TbScale },
-    { number: "100%", label: "Client Satisfaction", icon: TbShield },
+    { number: "15+", label: "Years Experience", icon: FaBalanceScale },
+    { number: "100%", label: "Client Satisfaction", icon: FaHandshake },
   ];
 
   return (
@@ -208,7 +208,7 @@ const ClientSuccessSection = () => {
 
       <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <div className="inline-flex items-center mb-4">
             <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
             <span className="text-sm md:text-base font-bold uppercase tracking-wider text-secondary-700">
@@ -219,7 +219,7 @@ const ClientSuccessSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
             Proven Results & Client Satisfaction
           </h2>
-          <p className="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
             Our track record speaks for itself. Discover how we've helped
             clients achieve successful outcomes across various legal matters
             with dedication and expertise.
@@ -227,25 +227,30 @@ const ClientSuccessSection = () => {
         </div>
 
         {/* Achievement Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 mb-12">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-slate-200/50 hover:shadow-lg transition-all duration-300"
+              className="flex flex-row lg:flex-col items-center justbetween lg:justify-center  text-center p-3 py-4 md:p-3.5 lg:p-4 bg-white/60 backdrop-blur-sm border border-slate-200/50 "
             >
-              <div className="flex justify-center mb-3">
-                <div className="w-12 h-12 bg-secondary-700/10 rounded-lg flex items-center justify-center">
-                  <achievement.icon className="w-6 h-6 text-secondary-700" />
+              <div className="w-[35%] flex justify-start lg:justify-center lg:mb-3">
+                <div className="hidden lg:flex w-14 h-14 bg-secondary-700/10 rounded-full items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-secondary-700" />
+                </div>
+                <div className="lg:hidden ">
+                  <achievement.icon className="w-11 h-11 text-secondary-700" />
                 </div>
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-slate-800 mb-1">
-                {achievement.number}
-              </div>
-              <div className="text-sm md:text-base text-slate-600 font-medium">
-                {achievement.label}
+              <div className="w-[65%]">
+                <div className="text-2xl md:text-3xl font-bold text-slate-800 mb-0.5 md:mb-1">
+                  {achievement.number}
+                </div>
+                <div className="text-sm md:text-base text-slate-600 font-medium">
+                  {achievement.label}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -253,7 +258,7 @@ const ClientSuccessSection = () => {
 
         {/* Success Stories */}
         <div className="mb-10">
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 pl-12 relative">
+          <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 pl-4 md:pl-8 lg:pl-12 relative">
             <span className="relative">
               Our Success Stories
               <div className="absolute -bottom-2 left-12 transform -translate-x-1/2 w-20 h-1 bg-burgundy rounded-full"></div>

@@ -58,10 +58,10 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-8">
               {/* Quick Links */}
               <div>
-                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
+                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 text-secondary-200">
                   Quick Links
                 </h4>
-                <ul className="space-y-2 lg:space-y-3 text-[1.1rem] lg:text-[1.2rem]">
+                <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
                       href="#home"
@@ -99,10 +99,10 @@ const Footer = () => {
 
               {/* Legal */}
               <div>
-                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
+                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 text-secondary-200">
                   Legal
                 </h4>
-                <ul className="space-y-2 lg:space-y-3 text-[1.1rem] lg:text-[1.2rem]">
+                <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
                       href="#"
@@ -142,7 +142,7 @@ const Footer = () => {
 
           {/* Contact Form - Full width on mobile, 4 columns on desktop */}
           <div className="lg:col-span-4">
-            <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 lg:mb-6 text-secondary-200">
+            <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 text-secondary-200">
               Get In Touch
             </h4>
             <form className="space-y-2">

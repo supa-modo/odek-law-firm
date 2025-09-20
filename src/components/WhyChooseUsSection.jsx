@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TbMinus, TbPlus } from "react-icons/tb";
+import { TbArrowRight, TbMinus, TbPlus } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WhyChooseUsSection = () => {
@@ -37,7 +37,7 @@ const WhyChooseUsSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-primary-700  relative">
+    <section className="py-12 md:py-20 lg:py-24 bg-primary-700  relative">
       {/* Subtle background image overlay */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
           <div className="lg:max-w-[43%] space-y-6">
             {/* Top Label */}
             <div>
-              <span className="text-sm md:text-[0.9rem] lg:text-[1.1rem] font-bold uppercase tracking-wider text-secondary-300">
+              <span className="text-sm md:text-[0.9rem] lg:text-[1.1rem] font-medium uppercase tracking-wider text-secondary-300">
                 A LAW FIRM YOU CAN TRUST
               </span>
             </div>
@@ -81,8 +81,11 @@ const WhyChooseUsSection = () => {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button className="w-full hover:cursor-pointer bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 font-semibold text-base transition-colors duration-200 shadow-lg hover:shadow-xl">
-                TALK TO A LAWYER
+              <button className="w-full hover:cursor-pointer bg-secondary-600 hover:bg-secondary-600 text-burgundy px-6 py-2.5 font-bold text-lg lg:text-[1.2rem] transition-colors duration-200 shadow-lg hover:shadow-xl">
+                <div className="flex items-center justify-center gap-2">
+                  <span>Talk To A Legal Expert</span>
+                  <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
               </button>
             </div>
           </div>
