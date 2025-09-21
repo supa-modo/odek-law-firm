@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { TbArrowRight, TbChevronDown } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,6 +7,38 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false);
   const location = useLocation();
+  const mobileMenuRef = useRef(null);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+        setIsPracticeAreasOpen(false);
+      }
+    };
+
+    // Add event listener when menu is open
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    // Cleanup event listeners
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsPracticeAreasOpen(false);
+  }, [location.pathname]);
 
   const practiceAreas = [
     {
@@ -72,10 +104,10 @@ const Header = () => {
                   className="w-14 lg:w-16 h-14 lg:h-16 mr-2"
                 />
                 <div>
-                  <h1 className="text-xl lg:text-2xl font-bold font-garamond text-secondary-800">
+                  <h1 className="text-xl lg:text-2xl font-extrabold font-garamond text-burgundy">
                     Obel & Company Associates
                   </h1>
-                  <p className="-mt-1 text-sm lg:text-[0.97rem] text-navy font-medium leading-tight">
+                  <p className="-mt-1 text-sm lg:text-[0.97rem] text-gray-700 font-semibold">
                     Advocates & Solicitors
                   </p>
                 </div>
@@ -91,11 +123,11 @@ const Header = () => {
                   {item.to.startsWith("/#") ? (
                     <a
                       href={item.to}
-                      className={`text-gray-500 hover:text-secondary-700 px-3 py-2 font-semibold transition-colors relative group`}
+                      className={`text-gray-500 hover:text-burgundy px-3 py-2 font-semibold transition-colors relative group`}
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-700 group-hover:w-full transition-all duration-200 ease-out`}
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-burgundy group-hover:w-full transition-all duration-300 ease-out`}
                       ></div>
                     </a>
                   ) : item.label === "Practice Areas" ? (
@@ -104,7 +136,7 @@ const Header = () => {
                       onMouseEnter={() => setIsPracticeAreasOpen(true)}
                       onMouseLeave={() => setIsPracticeAreasOpen(false)}
                     >
-                      <button className="text-gray-500 hover:text-primary-600 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
+                      <button className="text-gray-500 hover:text-burgundy px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
                         {item.label}
                         <motion.div
                           animate={{
@@ -147,12 +179,12 @@ const Header = () => {
                                 >
                                   <div className="flex items-start justify-between">
                                     <div className="flex-1">
-                                      <div className="font-semibold text-slate-800 group-hover/item:text-secondary-700 transition-colors duration-150">
+                                      <div className="font-semibold text-slate-800 group-hover/item:text-primary-600 transition-colors duration-200">
                                         {area.label}
                                       </div>
                                     </div>
                                     <motion.div
-                                      className="text-slate-400 group-hover/item:text-secondary-600 transition-colors duration-150"
+                                      className="text-slate-400 group-hover/item:text-primary-600 transition-colors duration-200"
                                       whileHover={{ x: 3 }}
                                       transition={{ duration: 0.2 }}
                                     >
@@ -169,15 +201,13 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.to}
-                      className={`text-gray-500 hover:text-primary-600 px-3 py-2 font-semibold transition-colors relative group ${
-                        location.pathname === item.to
-                          ? "text-secondary-700"
-                          : ""
+                      className={`text-gray-500 hover:text-burgundy px-3 py-2 font-semibold transition-colors duration-300 relative group ${
+                        location.pathname === item.to ? "text-primary-600" : ""
                       }`}
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-700 group-hover:bg-primary-600 group-hover:w-full transition-all duration-200 ease-out ${
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:bg-burgundy group-hover:w-full transition-all duration-500 ease-out ${
                           location.pathname === item.to ? "w-full" : ""
                         }`}
                       ></div>
@@ -188,9 +218,9 @@ const Header = () => {
                   )}
                 </React.Fragment>
               ))}
-              <button className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2">
+              <button className="bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">Free Consultations</span>
+                  <span className="font-semibold">Free Consultations</span>
                   <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
               </button>
@@ -200,7 +230,10 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
               className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 p-1.5 rounded-sm"
             >
               <svg
@@ -228,6 +261,8 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              ref={mobileMenuRef}
+              onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -239,7 +274,7 @@ const Header = () => {
               className="lg:hidden absolute top-full px-1 left-0 right-0 bg-white shadow-2xl border-t z-40 rounded-b-lg overflow-hidden"
             >
               <motion.div
-                className="px-2 pt-2 pb-3 space-y-1"
+                className="px-2 pt-2 pb-3 space-y-0.5"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1 }}
@@ -254,7 +289,7 @@ const Header = () => {
                     {item.to.startsWith("/#") ? (
                       <a
                         href={item.to}
-                        className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
+                        className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-[1.1rem] font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}
@@ -262,7 +297,7 @@ const Header = () => {
                     ) : item.label === "Practice Areas" ? (
                       <div>
                         <button
-                          className="text-gray-700 hover:text-gray-900 flex px-3 py-2 text-base font-medium w-full text-left items-center justify-between transition-colors duration-200 hover:bg-gray-50 rounded-md"
+                          className="text-gray-700 hover:text-gray-900 flex px-3 py-2 text-[1.1rem] font-medium w-full text-left items-center justify-between transition-colors duration-200 hover:bg-gray-50 rounded-md"
                           onClick={() =>
                             setIsPracticeAreasOpen(!isPracticeAreasOpen)
                           }
@@ -292,7 +327,7 @@ const Header = () => {
                                 duration: 0.3,
                                 ease: "easeInOut",
                               }}
-                              className="ml-4 mt-2 space-y-1 border-l-2 border-secondary-600/70 pl-4 overflow-hidden"
+                              className="ml-4 mt-2 space-y-0.5 border-l-2 border-burgundy pl-4 overflow-hidden"
                             >
                               {practiceAreas.map((area, areaIndex) => (
                                 <motion.div
@@ -307,7 +342,7 @@ const Header = () => {
                                 >
                                   <Link
                                     to={area.to}
-                                    className="text-gray-600 hover:text-gray-800 block px-3 py-2 text-sm font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
+                                    className="text-gray-600 hover:text-gray-800 block px-3 py-2 text-[0.9rem] font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
                                     onClick={() => {
                                       setIsMenuOpen(false);
                                       setIsPracticeAreasOpen(false);
@@ -324,7 +359,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.to}
-                        className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
+                        className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-[1.1rem] font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}
@@ -340,9 +375,9 @@ const Header = () => {
                 transition={{ delay: 0.4 }}
                 className="px-2"
               >
-                <button className="mb-3 bg-primary-500 text-white px-6 py-2 font-garamond text-lg group hover:opacity-90 transition-opacity font-medium w-full mt-2">
+                <button className="mb-3 bg-burgundy text-white px-6 py-2 font-garamond text-lg group hover:opacity-90 transition-opacity font-medium w-full mt-2">
                   <div className="flex items-center gap-2 justify-center">
-                    <span className="font-medium">Free Consultations</span>
+                    <span className="font-semibold">Free Consultations</span>
                     <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </button>

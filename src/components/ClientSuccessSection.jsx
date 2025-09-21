@@ -200,7 +200,7 @@ const ClientSuccessSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(/courtroom.jpg)",
+            backgroundImage: "url(/hammer.jpg)",
             filter: "blur(2px)",
           }}
         ></div>
@@ -216,7 +216,7 @@ const ClientSuccessSection = () => {
             </span>
             <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
             Proven Results & Client Satisfaction
           </h2>
           <p className="text-lg lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
@@ -237,11 +237,11 @@ const ClientSuccessSection = () => {
               className="flex flex-row lg:flex-col items-center justbetween lg:justify-center  text-center p-3 py-4 md:p-3.5 lg:p-4 bg-white/60 backdrop-blur-sm border border-slate-200/50 "
             >
               <div className="w-[35%] flex justify-start lg:justify-center lg:mb-3">
-                <div className="hidden lg:flex w-14 h-14 bg-secondary-700/10 rounded-full items-center justify-center">
-                  <achievement.icon className="w-8 h-8 text-secondary-700" />
+                <div className="hidden lg:flex w-14 h-14 bg-burgundy/10 rounded-full items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-burgundy" />
                 </div>
                 <div className="lg:hidden ">
-                  <achievement.icon className="w-11 h-11 text-secondary-700" />
+                  <achievement.icon className="w-11 h-11 text-burgundy" />
                 </div>
               </div>
               <div className="w-[65%]">

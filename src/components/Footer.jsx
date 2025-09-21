@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
 
               <div className="ml-4">
-                <h3 className="text-2xl leading-tight text-secondary-600 font-bold">
+                <h3 className="text-2xl leading-tight text-white font-bold">
                   Obel & Company Associates
                 </h3>
                 <p className="text-[1.1rem] lg:text-[1.15rem] text-gray-400 font-medium">
