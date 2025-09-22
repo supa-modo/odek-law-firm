@@ -123,11 +123,11 @@ const Header = () => {
                   {item.to.startsWith("/#") ? (
                     <a
                       href={item.to}
-                      className={`text-gray-500 hover:text-burgundy px-3 py-2 font-semibold transition-colors relative group`}
+                      className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 font-semibold transition-colors relative group`}
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-burgundy group-hover:w-full transition-all duration-300 ease-out`}
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-burgundy-900 group-hover:w-full transition-all duration-300 ease-out`}
                       ></div>
                     </a>
                   ) : item.label === "Practice Areas" ? (
@@ -136,7 +136,7 @@ const Header = () => {
                       onMouseEnter={() => setIsPracticeAreasOpen(true)}
                       onMouseLeave={() => setIsPracticeAreasOpen(false)}
                     >
-                      <button className="text-gray-500 hover:text-burgundy px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
+                      <button className="text-gray-500 hover:text-burgundy-900 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
                         {item.label}
                         <motion.div
                           animate={{
@@ -201,13 +201,15 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.to}
-                      className={`text-gray-500 hover:text-burgundy px-3 py-2 font-semibold transition-colors duration-300 relative group ${
-                        location.pathname === item.to ? "text-primary-600" : ""
+                      className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 font-semibold transition-colors duration-300 relative group ${
+                        location.pathname === item.to
+                          ? "text-secondary-700"
+                          : ""
                       }`}
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:bg-burgundy group-hover:w-full transition-all duration-500 ease-out ${
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-700 group-hover:bg-burgundy-900 group-hover:w-full transition-all duration-500 ease-out ${
                           location.pathname === item.to ? "w-full" : ""
                         }`}
                       ></div>

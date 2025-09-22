@@ -15,13 +15,13 @@ const LegalTeamPage = () => {
   const attorneys = [
     {
       id: 1,
-      name: "Thomas Obel",
+      name: "Example Name",
       position: "Senior Partner & Managing Director",
       // specialization: "Corporate & Commercial Law",
       experience: "25+ Years",
-      image: "/lawyer.jpg",
+      image: "/lawyer03.jpg",
       description:
-        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation. Mr. Obel has successfully handled multi-million shillingstransactions and complex legal disputes.",
+        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation handling multi-million shillingstransactions and complex legal disputes.",
       achievements: [
         "500+ Cases Won",
         "98% Success Rate",
@@ -37,7 +37,7 @@ const LegalTeamPage = () => {
       position: "Partner - Criminal Defense",
       specialization: "Criminal Law & Litigation",
       experience: "18+ Years",
-      image: "/court3.jpg",
+      image: "/lawyer002.jpg",
       description:
         "A formidable criminal defense attorney with an exceptional track record in high-profile cases. Sarah's strategic approach and courtroom expertise have secured favorable outcomes for countless clients.",
       achievements: [
@@ -56,7 +56,7 @@ const LegalTeamPage = () => {
       position: "Partner - Property & Real Estate",
       specialization: "Property & Land Law",
       experience: "20+ Years",
-      image: "/documents2.jpg",
+      image: "/lawyer04.jpg",
       description:
         "Specializing in property law, land disputes, and real estate transactions helping clients navigate complex land ownership issues.",
       achievements: [
@@ -75,7 +75,7 @@ const LegalTeamPage = () => {
       position: "Senior Associate - Family Law",
       specialization: "Family Law & Succession",
       experience: "15+ Years",
-      image: "/scales.jpg",
+      image: "/lawyer001.jpg",
       description:
         "Compassionate and skilled in family law matters including divorce, custody, and succession planning bringing empathy and legal expertise to sensitive family situations.",
       achievements: [
@@ -162,7 +162,7 @@ const LegalTeamPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
-              Our Attorneys
+              Our Legal Experts
             </h1>
 
             <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -196,7 +196,7 @@ const LegalTeamPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-center sm:text-left"
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
@@ -205,29 +205,34 @@ const LegalTeamPage = () => {
                     alt={attorneys[0].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Dark overlay at bottom for name and position */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
+                    <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
+                      {attorneys[0].name}
+                    </h3>
+                    <p className="text-white/90 font-semibold text-[1.1rem]">
+                      {attorneys[0].position}
+                    </p>
+                  </div>
+                  {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       {attorneys[0].specialization}
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
-                  {attorneys[0].name}
-                </h3>
-                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
-                  {attorneys[0].position}
-                </p>
-                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
-                  {attorneys[0].description.substring(0, 220)}...
-                </p>
+                <div className="px-2 md:px-0">
+                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                    {attorneys[0].description.substring(0, 220)}...
+                  </p>
+                </div>
               </motion.div>
 
               {/* Attorney 2 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.9, delay: 0.4 }}
                 className="text-center sm:text-left"
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
@@ -236,22 +241,27 @@ const LegalTeamPage = () => {
                     alt={attorneys[1].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Dark overlay at bottom for name and position */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
+                    <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
+                      {attorneys[1].name}
+                    </h3>
+                    <p className="text-white/90 font-semibold text-[1.1rem]">
+                      {attorneys[1].position}
+                    </p>
+                  </div>
+                  {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       {attorneys[1].specialization}
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
-                  {attorneys[1].name}
-                </h3>
-                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
-                  {attorneys[1].position}
-                </p>
-                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
-                  {attorneys[1].description.substring(0, 220)}...
-                </p>
+                <div className="px-2 md:px-0">
+                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                    {attorneys[1].description.substring(0, 220)}...
+                  </p>
+                </div>
               </motion.div>
             </div>
 
@@ -259,7 +269,7 @@ const LegalTeamPage = () => {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="hidden md:block space-y-4 md:space-y-5  lg:col-span-2"
             >
               <div>
@@ -300,9 +310,14 @@ const LegalTeamPage = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className="grid lg:grid-cols-4 gap-12 lg:gap-20 items-start mt-10">
+          <div className="grid lg:grid-cols-4 gap-12 lg:gap-20 items-start mt-8 md:mt-4 lg:mt-0">
             {/* Text Block */}
-            <motion.div className="hidden md:block lg:col-span-2 lg:pt-10">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden md:block lg:col-span-2 lg:pt-24"
+            >
               <div className="relative z-10">
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
@@ -316,13 +331,13 @@ const LegalTeamPage = () => {
                   to achieve the best possible outcome.
                 </p>
                 <div className="flex flex-col md:flex-row gap-4">
-                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-4 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2.5 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                     <span className="flex items-center justify-center gap-3">
                       <span>Talk To A Legal Expert</span>
                       <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                   </button>
-                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-lg hover:bg-white/10 px-6 py-3 font-semibold transition-all duration-300">
+                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-[1.2rem] hover:bg-white/10 px-6 py-2.5 font-semibold transition-all duration-300">
                     About Our Firm
                   </button>
                 </div>
@@ -332,60 +347,85 @@ const LegalTeamPage = () => {
             {/* Two Attorneys */}
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-14">
               {/* Attorney 3 */}
-              <motion.div className="text-center sm:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-center sm:text-left"
+              >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
                     src={attorneys[2].image}
                     alt={attorneys[2].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Dark overlay at bottom for name and position */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
+                    <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
+                      {attorneys[2].name}
+                    </h3>
+                    <p className="text-white/90 font-semibold text-[1.1rem]">
+                      {attorneys[2].position}
+                    </p>
+                  </div>
+                  {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       {attorneys[2].specialization}
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
-                  {attorneys[2].name}
-                </h3>
-                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
-                  {attorneys[2].position}
-                </p>
-                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
-                  {attorneys[2].description.substring(0, 220)}...
-                </p>
+                <div className="px-2 md:px-0">
+                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                    {attorneys[2].description.substring(0, 220)}...
+                  </p>
+                </div>
               </motion.div>
 
               {/* Attorney 4 */}
-              <motion.div className="text-center sm:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-center sm:text-left"
+              >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
                     src={attorneys[3].image}
                     alt={attorneys[3].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Dark overlay at bottom for name and position */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
+                    <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
+                      {attorneys[3].name}
+                    </h3>
+                    <p className="text-white/90 font-semibold text-[1.1rem]">
+                      {attorneys[3].position}
+                    </p>
+                  </div>
+                  {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       {attorneys[3].specialization}
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
-                  {attorneys[3].name}
-                </h3>
-                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
-                  {attorneys[3].position}
-                </p>
-                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
-                  {attorneys[3].description.substring(0, 220)}...
-                </p>
+                <div className="px-2 md:px-0">
+                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                    {attorneys[3].description.substring(0, 220)}...
+                  </p>
+                </div>
               </motion.div>
             </div>
 
-              {/* Text Block */}
-              <motion.div className="md:hidden block lg:col-span-2 py-10">
+            {/* Text Block */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1 }}
+              className="md:hidden block lg:col-span-2 py-10 px-3 md:px-0"
+            >
               <div className="relative z-10">
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
@@ -398,14 +438,14 @@ const LegalTeamPage = () => {
                   are here to provide the guidance and representation you need
                   to achieve the best possible outcome.
                 </p>
-                <div className="flex flex-col md:flex-row gap-4">
-                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-4 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                <div className="flex flex-col md:flex-row gap-2.5 md:gap-3 lg:gap-4">
+                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-3 font-bold lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                     <span className="flex items-center justify-center gap-3">
                       <span>Talk To A Legal Expert</span>
                       <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                   </button>
-                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-lg hover:bg-white/10 px-6 py-3 font-semibold transition-all duration-300">
+                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-lg hover:bg-white/10 px-6 py-2.5 font-bold transition-all duration-300">
                     About Our Firm
                   </button>
                 </div>
@@ -415,84 +455,84 @@ const LegalTeamPage = () => {
         </div>
       </section>
 
-      {/* About Our Firm Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 relative">
+      {/* Legal Excellence Stats Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url(/scales.jpg)",
-              filter: "blur(2px)",
+              backgroundImage: "url(/courtroom.jpg)",
+              filter: "blur(1px)",
             }}
           ></div>
         </div>
 
-        <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column - About Content */}
-            <div className="space-y-6">
-              <div>
-                <span className="text-sm md:text-base font-bold uppercase tracking-wider text-secondary-500">
-                  ABOUT OUR FIRM
-                </span>
-              </div>
+        {/* Geometric Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-40 h-40 border border-secondary-500/20 rounded-full"></div>
+          <div className="absolute bottom-20 left-20 w-32 h-32 border border-secondary-600/15 rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 border border-secondary-400/10 rounded-full"></div>
+        </div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                We're one of the leading law firms in Kenya
-              </h2>
+        <div className="max-w-screen-2xl mx-auto px-3 md:px-6 lg:px-14 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center mb-4">
+              <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
+              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-secondary-500">
+                OUR TRACK RECORD
+              </span>
+              <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-300 max-w-6xl mx-auto">
+              Our commitment to excellence is reflected in the outstanding
+              results we achieve for our clients. With years of experience and a
+              proven track record, we are confident in our ability to deliver
+              the best possible results for our clients.
+              <br />
+              Our 98% success rate and 500+ cases won is a testament to our
+              commitment to excellence in providing legal services to our
+              clients.
+            </p>
+          </motion.div>
 
-              <p className="text-lg lg:text-xl text-slate-300 leading-relaxed">
-                With a solid reputation built on years of successful cases and
-                satisfied clients, our firm has established itself as a trusted
-                name in the legal industry. Our commitment to excellence,
-                integrity, and client satisfaction drives everything we do.
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-16"
+          >
+            <div className="bg-gradient-to-r from-secondary-700/30 to-secondary-600/30 backdrop-blur-sm p-4 md:p-8 lg:p-12 border border-secondary-500/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Ready to Experience Excellence?
+              </h3>
+              <p className="text-slate-300 text-lg mb-4 md:mb-6 lg:mb-8 max-w-2xl mx-auto">
+                Join hundreds of satisfied clients who have trusted us with
+                their most important legal matters
               </p>
-
-              <div className="pt-4">
-                <button className="bg-secondary-700 hover:bg-secondary-800 text-white px-8 py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
-                  <span className="flex items-center gap-3">
-                    <span>ABOUT OUR FIRM</span>
+              <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center">
+                <button className="bg-burgundy hover:bg-burgundy/80 text-white px-8 py-2.5 font-semibold tracking-wide border border-burgundy text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                  <span className="flex items-center justify-center gap-3">
+                    <span>Schedule Consultation</span>
                     <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
+                <button className="bg-transparent border-2 border-secondary-500 text-secondary-400 hover:bg-secondary-500/10 px-8 py-2.5 tracking-wide font-semibold text-base md:text-lg transition-all duration-300">
+                  Our Practice Areas
+                </button>
               </div>
             </div>
-
-            {/* Right Column - Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { number: "500+", label: "Cases Won", icon: FaGavel },
-                { number: "98%", label: "Success Rate", icon: FaBalanceScale },
-                { number: "25+", label: "Years Experience", icon: FaUserTie },
-                {
-                  number: "100%",
-                  label: "Client Satisfaction",
-                  icon: FaHandshake,
-                },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-3">
-                    <div className="w-12 h-12 bg-secondary-700/20 rounded-lg flex items-center justify-center">
-                      <stat.icon className="w-6 h-6 text-secondary-400" />
-                    </div>
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm md:text-base text-slate-300 font-medium">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

@@ -105,6 +105,14 @@ const Footer = () => {
                 <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
+                      href="/legal-team"
+                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
+                    >
+                      Our Legal Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="#"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
@@ -125,14 +133,6 @@ const Footer = () => {
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       Cookie Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
-                    >
-                      Disclaimer
                     </a>
                   </li>
                 </ul>
