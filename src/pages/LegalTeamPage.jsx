@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TbArrowRight } from "react-icons/tb";
+import { TbArrowRight, TbCloverFilled } from "react-icons/tb";
 import {
   FaBalanceScale,
   FaHandshake,
@@ -9,18 +9,19 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { FaClover } from "react-icons/fa6";
 
 const LegalTeamPage = () => {
   const attorneys = [
     {
       id: 1,
-      name: "Dr. Obel Mwangi",
+      name: "Thomas Obel",
       position: "Senior Partner & Managing Director",
-      specialization: "Corporate & Commercial Law",
+      // specialization: "Corporate & Commercial Law",
       experience: "25+ Years",
       image: "/lawyer.jpg",
       description:
-        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation. Dr. Mwangi has successfully handled multi-million dollar transactions and complex legal disputes.",
+        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation. Mr. Obel has successfully handled multi-million shillingstransactions and complex legal disputes.",
       achievements: [
         "500+ Cases Won",
         "98% Success Rate",
@@ -57,7 +58,7 @@ const LegalTeamPage = () => {
       experience: "20+ Years",
       image: "/documents2.jpg",
       description:
-        "Specializing in property law, land disputes, and real estate transactions. Michael's deep understanding of Kenyan property law has helped clients navigate complex land ownership issues.",
+        "Specializing in property law, land disputes, and real estate transactions helping clients navigate complex land ownership issues.",
       achievements: [
         "100% Client Satisfaction",
         "300+ Property Cases",
@@ -76,7 +77,7 @@ const LegalTeamPage = () => {
       experience: "15+ Years",
       image: "/scales.jpg",
       description:
-        "Compassionate and skilled in family law matters including divorce, custody, and succession planning. Grace brings empathy and legal expertise to sensitive family situations.",
+        "Compassionate and skilled in family law matters including divorce, custody, and succession planning bringing empathy and legal expertise to sensitive family situations.",
       achievements: [
         "Family Law Specialist",
         "150+ Family Cases",
@@ -132,7 +133,7 @@ const LegalTeamPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-[8rem] pb-16 md:pb-20 lg:pb-30 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative">
+      <section className="pt-[5.5rem] lg:pt-[8rem] pb-10 md:pb-16 lg:pb-30 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -154,13 +155,13 @@ const LegalTeamPage = () => {
           <div className="text-center">
             <div className="inline-flex items-center mb-4">
               <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
-              <span className="text-sm md:text-base font-bold uppercase tracking-wider text-secondary-500">
+              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-secondary-500">
                 MEET THE PROS
               </span>
               <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
             </div>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
               Our Attorneys
             </h1>
 
@@ -174,7 +175,7 @@ const LegalTeamPage = () => {
       </section>
 
       {/* Featured Attorneys Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
+      <section className="md:py-20 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -186,11 +187,11 @@ const LegalTeamPage = () => {
           ></div>
         </div>
 
-        <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
+        <div className="max-w-screen-2xl mx-auto md:px-6 lg:px-14 relative z-10">
           {/* Top Row */}
-          <div className="grid lg:grid-cols-3 gap-12 items-center">
+          <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 items-center">
             {/* Two Attorneys */}
-            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-14">
               {/* Attorney 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -202,7 +203,7 @@ const LegalTeamPage = () => {
                   <img
                     src={attorneys[0].image}
                     alt={attorneys[0].name}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -211,14 +212,14 @@ const LegalTeamPage = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-slate-800 uppercase tracking-wide">
+                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
                   {attorneys[0].name}
                 </h3>
-                <p className="text-burgundy font-semibold text-sm mt-1">
+                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
                   {attorneys[0].position}
                 </p>
-                <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-                  {attorneys[0].description.substring(0, 120)}...
+                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
+                  {attorneys[0].description.substring(0, 220)}...
                 </p>
               </motion.div>
 
@@ -233,7 +234,7 @@ const LegalTeamPage = () => {
                   <img
                     src={attorneys[1].image}
                     alt={attorneys[1].name}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -242,14 +243,14 @@ const LegalTeamPage = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-slate-800 uppercase tracking-wide">
+                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
                   {attorneys[1].name}
                 </h3>
-                <p className="text-burgundy font-semibold text-sm mt-1">
+                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
                   {attorneys[1].position}
                 </p>
-                <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-                  {attorneys[1].description.substring(0, 120)}...
+                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
+                  {attorneys[1].description.substring(0, 220)}...
                 </p>
               </motion.div>
             </div>
@@ -259,38 +260,38 @@ const LegalTeamPage = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-6"
+              className="hidden md:block space-y-4 md:space-y-5  lg:col-span-2"
             >
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-secondary-700">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-primary-600">
                   EXPERTISE & EXPERIENCE
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 leading-tight">
                 Decades of Legal Excellence
               </h2>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 text-[1.1rem] lg:text-xl leading-relaxed">
                 Our attorneys combine deep legal knowledge with practical
                 experience to deliver results that exceed expectations. From
                 complex corporate transactions to personal injury cases, we
                 bring the expertise you need.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-4 text-[1.1rem] lg:text-xl">
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-secondary-700 rounded-full"></div>
-                  <span className="text-slate-700 font-medium">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
                     25+ Years Combined Experience
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-secondary-700 rounded-full"></div>
-                  <span className="text-slate-700 font-medium">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
                     98% Success Rate
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-secondary-700 rounded-full"></div>
-                  <span className="text-slate-700 font-medium">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
                     500+ Cases Won
                   </span>
                 </div>
@@ -299,65 +300,44 @@ const LegalTeamPage = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className="grid lg:grid-cols-3 gap-12 items-center mt-20">
+          <div className="grid lg:grid-cols-4 gap-12 lg:gap-20 items-start mt-10">
             {/* Text Block */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:col-span-1 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 p-8 shadow-2xl relative overflow-hidden"
-            >
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-5">
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                  style={{
-                    backgroundImage: "url(/scales.jpg)",
-                    filter: "blur(1px)",
-                  }}
-                ></div>
-              </div>
-
+            <motion.div className="hidden md:block lg:col-span-2 lg:pt-10">
               <div className="relative z-10">
-                <span className="text-sm font-bold uppercase tracking-wider text-secondary-700">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
                 </span>
-                <h3 className="text-2xl font-bold text-white mt-4 mb-6">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-4 mb-6">
                   Ready to Get Started?
                 </h3>
-                <p className="text-slate-300 leading-relaxed mb-8">
+                <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
                   Don't face legal challenges alone. Our experienced attorneys
                   are here to provide the guidance and representation you need
                   to achieve the best possible outcome.
                 </p>
-                <div className="space-y-4">
-                  <button className="w-full bg-secondary-700 hover:bg-secondary-800 text-white px-6 py-4 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                <div className="flex flex-col md:flex-row gap-4">
+                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-4 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                     <span className="flex items-center justify-center gap-3">
-                      <span>FREE CONSULTATION</span>
+                      <span>Talk To A Legal Expert</span>
                       <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                   </button>
-                  <button className="w-full bg-transparent border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 font-semibold transition-all duration-300">
-                    VIEW ALL ATTORNEYS
+                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-lg hover:bg-white/10 px-6 py-3 font-semibold transition-all duration-300">
+                    About Our Firm
                   </button>
                 </div>
               </div>
             </motion.div>
 
             {/* Two Attorneys */}
-            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-14">
               {/* Attorney 3 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-center sm:text-left"
-              >
+              <motion.div className="text-center sm:text-left">
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
                     src={attorneys[2].image}
                     alt={attorneys[2].name}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -366,29 +346,24 @@ const LegalTeamPage = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-slate-800 uppercase tracking-wide">
+                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
                   {attorneys[2].name}
                 </h3>
-                <p className="text-burgundy font-semibold text-sm mt-1">
+                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
                   {attorneys[2].position}
                 </p>
-                <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-                  {attorneys[2].description.substring(0, 120)}...
+                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
+                  {attorneys[2].description.substring(0, 220)}...
                 </p>
               </motion.div>
 
               {/* Attorney 4 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-center sm:text-left"
-              >
+              <motion.div className="text-center sm:text-left">
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
                     src={attorneys[3].image}
                     alt={attorneys[3].name}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -397,17 +372,45 @@ const LegalTeamPage = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-slate-800 uppercase tracking-wide">
+                <h3 className="mt-6 text-xl font-extrabold text-slate-800 uppercase tracking-wide">
                   {attorneys[3].name}
                 </h3>
-                <p className="text-burgundy font-semibold text-sm mt-1">
+                <p className="text-burgundy font-semibold text-[1.1rem] mt-1">
                   {attorneys[3].position}
                 </p>
-                <p className="text-slate-600 text-sm mt-3 leading-relaxed">
-                  {attorneys[3].description.substring(0, 120)}...
+                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-3">
+                  {attorneys[3].description.substring(0, 220)}...
                 </p>
               </motion.div>
             </div>
+
+              {/* Text Block */}
+              <motion.div className="md:hidden block lg:col-span-2 py-10">
+              <div className="relative z-10">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
+                  GET LEGAL HELP
+                </span>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-4 mb-6">
+                  Ready to Get Started?
+                </h3>
+                <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
+                  Don't face legal challenges alone. Our experienced attorneys
+                  are here to provide the guidance and representation you need
+                  to achieve the best possible outcome.
+                </p>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-4 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                    <span className="flex items-center justify-center gap-3">
+                      <span>Talk To A Legal Expert</span>
+                      <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </button>
+                  <button className="w-full bg-transparent border-2 border-secondary-700 text-secondary-800 text-lg hover:bg-white/10 px-6 py-3 font-semibold transition-all duration-300">
+                    About Our Firm
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
