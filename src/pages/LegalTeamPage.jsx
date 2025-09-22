@@ -196,6 +196,7 @@ const LegalTeamPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-center sm:text-left"
               >
@@ -232,6 +233,7 @@ const LegalTeamPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.9, delay: 0.4 }}
                 className="text-center sm:text-left"
               >
@@ -269,6 +271,7 @@ const LegalTeamPage = () => {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="hidden md:block space-y-4 md:space-y-5  lg:col-span-2"
             >
@@ -315,6 +318,7 @@ const LegalTeamPage = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden md:block lg:col-span-2 lg:pt-24"
             >
@@ -350,6 +354,7 @@ const LegalTeamPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center sm:text-left"
               >
@@ -386,6 +391,7 @@ const LegalTeamPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-center sm:text-left"
               >
@@ -423,6 +429,7 @@ const LegalTeamPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.9, delay: 0.1 }}
               className="md:hidden block lg:col-span-2 py-10 px-3 md:px-0"
             >
@@ -480,6 +487,7 @@ const LegalTeamPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -509,6 +517,7 @@ const LegalTeamPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-center mt-16"
           >

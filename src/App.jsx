@@ -10,8 +10,10 @@ import ContactSection from "./components/ContactSection";
 import ClientSuccessSection from "./components/ClientSuccessSection";
 import LegalResourcesSection from "./components/LegalResourcesSection";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import AboutPage from "./pages/AboutPage";
 import PracticeAreasPage from "./pages/PracticeAreasPage";
+import PracticeAreaDetailPage from "./pages/PracticeAreaDetailPage";
 import LegalTeamPage from "./pages/LegalTeamPage";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -20,6 +22,7 @@ function App() {
   return (
     <>
       <Analytics />
+      <ScrollToTop />
       <Routes>
         {/* Home Page */}
         <Route
@@ -45,6 +48,10 @@ function App() {
 
         {/* Practice Areas Page */}
         <Route path="/practice-areas" element={<PracticeAreasPage />} />
+        <Route
+          path="/practice-areas/:areaId"
+          element={<PracticeAreaDetailPage />}
+        />
 
         {/* Legal Team Page */}
         <Route path="/legal-team" element={<LegalTeamPage />} />

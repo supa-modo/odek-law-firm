@@ -51,7 +51,6 @@ const AboutSection = () => {
       description:
         "Banking and finance law expertise including loan agreements, credit facilities, and financial transactions with a focus on securing favorable terms and protecting client interests.",
     },
-    ,
     {
       icon: GiHandcuffs,
       title: "Criminal Law",
@@ -86,7 +85,7 @@ const AboutSection = () => {
                 clients.
               </p>
               <a
-                href="#services"
+                href="/practice-areas"
                 className="inline-flex items-center text-secondary-700 uppercase hover:text-red-700 font-bold text-[0.9rem] lg:text-base mt-4 lg:mt-6 group transition-colors duration-300"
               >
                 <span className="underline underline-offset-4">Learn More</span>
