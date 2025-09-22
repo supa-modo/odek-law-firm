@@ -123,7 +123,7 @@ const PracticeAreasPage = () => {
 
             <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               We offer a diverse range of practice areas to cater to all of our
-              clients' legal needs. Our attorneys specialize in family law,
+              clients' legal needs. Our lawyers specialize in family law,
               corporate law, criminal law, immigration, and more.
             </p>
           </div>
@@ -200,7 +200,7 @@ const PracticeAreasPage = () => {
                 Ready to Begin?
               </h3>
               <p className="text-slate-800 text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto">
-                Don't face legal challenges alone. Our experienced attorneys are
+                Don't face legal challenges alone. Our experienced lawyers are
                 here to provide the guidance and representation you need to
                 achieve the best possible outcome.
               </p>

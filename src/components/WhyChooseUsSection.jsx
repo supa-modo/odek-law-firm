@@ -9,19 +9,19 @@ const WhyChooseUsSection = () => {
     {
       title: "We Are People First",
       content:
-        "We prioritize our clients and their needs above everything else. Our attorneys take the time to understand the unique circumstances of each case and provide personalized strategies that cater to our clients' specific objectives. We believe that building strong relationships with our clients leads to better outcomes and lasting trust.",
+        "We prioritize our clients and their needs above everything else. Our lawyers take the time to understand the unique circumstances of each case and provide personalized strategies that cater to our clients' specific objectives. We believe that building strong relationships with our clients leads to better outcomes and lasting trust.",
       icon: "👥",
     },
     {
       title: "We Are Committed To Results",
       content:
-        "Our track record speaks for itself. We don't just promise results – we deliver them. Our team of experienced attorneys has successfully resolved complex legal matters across Kenya, consistently achieving favorable outcomes for our clients through strategic thinking and relentless advocacy.",
+        "Our track record speaks for itself. We don't just promise results – we deliver them. Our team of experienced lawyers has successfully resolved complex legal matters across Kenya, consistently achieving favorable outcomes for our clients through strategic thinking and relentless advocacy.",
       icon: "🎯",
     },
     {
       title: "We Are Strong Negotiators",
       content:
-        "Negotiation is an art, and our attorneys are masters of it. Whether in boardrooms, courtrooms, or settlement discussions, we leverage our deep understanding of Kenyan law and business practices to secure the best possible terms for our clients. Our negotiation skills often lead to favorable settlements without the need for lengthy litigation.",
+        "Negotiation is an art, and our lawyers are masters of it. Whether in boardrooms, courtrooms, or settlement discussions, we leverage our deep understanding of Kenyan law and business practices to secure the best possible terms for our clients. Our negotiation skills often lead to favorable settlements without the need for lengthy litigation.",
       icon: "🤝",
     },
     {

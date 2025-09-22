@@ -19,7 +19,7 @@ const ServicesSection = () => {
                   regulations, an individual facing legal challenges, or a
                   family dealing with sensitive matters, we provide expert
                   counsel tailored to your unique situation. Our experienced
-                  attorneys understand both local and international law to serve
+                  lawyers understand both local and international law to serve
                   your best interests.
                 </p>
               </div>

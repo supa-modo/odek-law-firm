@@ -13,7 +13,7 @@ const HeroSection = () => {
       subtitle: "Innovative Trusted Advice",
       highlight: "Delivering Justice with Excellence.",
       description:
-        "Experience unparalleled legal representation with our seasoned team of attorneys leveraging decades of expertise and innovative approaches to secure the best outcomes for our clients.",
+        "Experience unparalleled legal representation with our seasoned team of lawyers leveraging decades of expertise and innovative approaches to secure the best outcomes for our clients.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const HeroSection = () => {
       subtitle: "Proven Trial Excellence",
       highlight: "Defending Your Rights with Precision.",
       description:
-        "Our experienced trial attorneys bring commanding courtroom presence and strategic litigation expertise to protect your interests and achieve favorable outcomes in even the most complex cases.",
+        "Our experienced trial lawyers bring commanding courtroom presence and strategic litigation expertise to protect your interests and achieve favorable outcomes in even the most complex cases.",
     },
     {
       id: 3,

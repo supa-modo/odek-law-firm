@@ -38,16 +38,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our civil law practice encompasses a wide range of legal matters including contract disputes, personal injury claims, property rights protection, and civil litigation. We provide expert representation to protect your rights and interests in civil matters.",
       services: [
-        "Contract Disputes",
-        "Personal Injury Claims",
-        "Property Rights Protection",
-        "Civil Litigation",
-        "Tort Claims",
-        "Breach of Contract",
-        "Negligence Cases",
-        "Property Disputes",
-        "Civil Appeals",
-        "Mediation & Arbitration",
+        {
+          name: "Contract Disputes",
+          description:
+            "Expert resolution of contract disagreements, including breach of contract claims, interpretation disputes, and enforcement actions.",
+        },
+        {
+          name: "Personal Injury Claims",
+          description:
+            "Comprehensive representation for accident victims, including car accidents, slip and falls, and workplace injuries.",
+        },
+        {
+          name: "Property Rights Protection",
+          description:
+            "Safeguarding your property interests through legal action, including trespass, nuisance, and property damage claims.",
+        },
+        {
+          name: "Civil Litigation",
+          description:
+            "Full-service civil litigation representation from case initiation through trial and appeal proceedings.",
+        },
+        {
+          name: "Tort Claims",
+          description:
+            "Legal action for civil wrongs including negligence, intentional torts, and strict liability cases.",
+        },
+        {
+          name: "Breach of Contract",
+          description:
+            "Enforcement of contractual obligations and recovery of damages for contract violations.",
+        },
+        {
+          name: "Negligence Cases",
+          description:
+            "Representation in negligence claims where duty of care was breached, resulting in harm or damages.",
+        },
+        {
+          name: "Property Disputes",
+          description:
+            "Resolution of property-related conflicts including boundary disputes, easements, and property ownership issues.",
+        },
+        {
+          name: "Civil Appeals",
+          description:
+            "Appellate representation to challenge unfavorable civil court decisions and seek justice.",
+        },
+        {
+          name: "Mediation & Arbitration",
+          description:
+            "Alternative dispute resolution services to resolve conflicts efficiently outside of court.",
+        },
       ],
       keyFeatures: [
         "Expert courtroom representation",
@@ -72,16 +112,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our tax law practice provides comprehensive tax planning, compliance, and dispute resolution services for individuals and businesses. We help clients navigate complex tax regulations and optimize their tax strategies.",
       services: [
-        "Tax Planning",
-        "Tax Compliance",
-        "Tax Dispute Resolution",
-        "IRS Audits",
-        "Tax Appeals",
-        "Estate Tax Planning",
-        "Business Tax Strategy",
-        "International Tax",
-        "Tax Litigation",
-        "Tax Advisory Services",
+        {
+          name: "Tax Planning",
+          description:
+            "Strategic tax planning to minimize tax liability while ensuring full compliance with tax laws and regulations.",
+        },
+        {
+          name: "Tax Compliance",
+          description:
+            "Comprehensive tax compliance services including preparation, filing, and ongoing tax obligation management.",
+        },
+        {
+          name: "Tax Dispute Resolution",
+          description:
+            "Expert representation in tax disputes with tax authorities, including negotiations and settlement agreements.",
+        },
+        {
+          name: "IRS Audits",
+          description:
+            "Professional representation during IRS audits, examinations, and investigations to protect your interests.",
+        },
+        {
+          name: "Tax Appeals",
+          description:
+            "Appellate representation to challenge unfavorable tax decisions and seek fair resolution of tax matters.",
+        },
+        {
+          name: "Estate Tax Planning",
+          description:
+            "Strategic estate planning to minimize estate taxes and ensure efficient wealth transfer to beneficiaries.",
+        },
+        {
+          name: "Business Tax Strategy",
+          description:
+            "Comprehensive business tax planning including entity selection, tax-efficient business structures, and ongoing optimization.",
+        },
+        {
+          name: "International Tax",
+          description:
+            "Expert guidance on international tax matters including cross-border transactions and foreign tax compliance.",
+        },
+        {
+          name: "Tax Litigation",
+          description:
+            "Aggressive representation in tax court proceedings and complex tax litigation matters.",
+        },
+        {
+          name: "Tax Advisory Services",
+          description:
+            "Ongoing tax advisory services to help businesses and individuals make informed tax decisions.",
+        },
       ],
       keyFeatures: [
         "Strategic tax planning and optimization",
@@ -106,16 +186,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our property and land law practice covers all aspects of real estate law, from property transactions to complex land disputes. We ensure smooth property transfers and protect your real estate investments.",
       services: [
-        "Property Transactions",
-        "Land Disputes",
-        "Zoning Issues",
-        "Property Rights Advocacy",
-        "Title Searches",
-        "Property Development",
-        "Commercial Leasing",
-        "Property Finance",
-        "Land Use Planning",
-        "Property Litigation",
+        {
+          name: "Property Transactions",
+          description:
+            "Comprehensive legal support for property purchases, sales, and transfers including due diligence and documentation.",
+        },
+        {
+          name: "Land Disputes",
+          description:
+            "Expert resolution of land ownership disputes, boundary conflicts, and property rights issues.",
+        },
+        {
+          name: "Zoning Issues",
+          description:
+            "Legal assistance with zoning applications, variances, and compliance with local land use regulations.",
+        },
+        {
+          name: "Property Rights Advocacy",
+          description:
+            "Protection and enforcement of property rights including easements, covenants, and property restrictions.",
+        },
+        {
+          name: "Title Searches",
+          description:
+            "Thorough title examination and clearance services to ensure clear property ownership and identify potential issues.",
+        },
+        {
+          name: "Property Development",
+          description:
+            "Legal guidance for property development projects including permits, approvals, and regulatory compliance.",
+        },
+        {
+          name: "Commercial Leasing",
+          description:
+            "Drafting and negotiation of commercial lease agreements to protect your interests as landlord or tenant.",
+        },
+        {
+          name: "Property Finance",
+          description:
+            "Legal support for property financing including mortgage documentation and loan restructuring.",
+        },
+        {
+          name: "Land Use Planning",
+          description:
+            "Strategic land use planning and development approval processes for optimal property utilization.",
+        },
+        {
+          name: "Property Litigation",
+          description:
+            "Aggressive representation in property-related lawsuits and disputes to protect your real estate interests.",
+        },
       ],
       keyFeatures: [
         "End-to-end property transaction support",
@@ -140,16 +260,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "We provide comprehensive employment law services for both employees and employers, ensuring fair treatment and compliance with labor regulations. Our expertise covers all aspects of workplace law.",
       services: [
-        "Workplace Discrimination",
-        "Wrongful Termination",
-        "Labor Disputes",
-        "Employee Rights Protection",
-        "Employment Contracts",
-        "HR Compliance",
-        "Workplace Safety",
-        "Employee Benefits",
-        "Workplace Investigations",
-        "Employment Litigation",
+        {
+          name: "Workplace Discrimination",
+          description:
+            "Legal representation for employees facing discrimination based on race, gender, age, disability, or other protected characteristics.",
+        },
+        {
+          name: "Wrongful Termination",
+          description:
+            "Protection against unlawful termination including breach of contract, retaliation, and violation of employment rights.",
+        },
+        {
+          name: "Labor Disputes",
+          description:
+            "Resolution of workplace conflicts including wage disputes, working conditions, and collective bargaining issues.",
+        },
+        {
+          name: "Employee Rights Protection",
+          description:
+            "Comprehensive protection of employee rights including fair treatment, privacy, and workplace dignity.",
+        },
+        {
+          name: "Employment Contracts",
+          description:
+            "Drafting and negotiation of employment agreements, non-compete clauses, and severance packages.",
+        },
+        {
+          name: "HR Compliance",
+          description:
+            "Ensuring workplace policies and practices comply with employment laws and regulations.",
+        },
+        {
+          name: "Workplace Safety",
+          description:
+            "Legal guidance on workplace safety requirements and representation in safety violation cases.",
+        },
+        {
+          name: "Employee Benefits",
+          description:
+            "Legal assistance with employee benefit programs, ERISA compliance, and benefit disputes.",
+        },
+        {
+          name: "Workplace Investigations",
+          description:
+            "Professional workplace investigations for harassment, misconduct, and policy violations.",
+        },
+        {
+          name: "Employment Litigation",
+          description:
+            "Aggressive representation in employment-related lawsuits and administrative proceedings.",
+        },
       ],
       keyFeatures: [
         "Comprehensive workplace policy development",
@@ -174,16 +334,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our corporate law practice encompasses mergers and acquisitions, corporate governance, commercial transactions, and business formation. We help businesses navigate complex regulatory environments and achieve their strategic objectives.",
       services: [
-        "Business Formation",
-        "Mergers & Acquisitions",
-        "Corporate Governance",
-        "Commercial Litigation",
-        "Commercial Contracts",
-        "Joint Ventures",
-        "Corporate Restructuring",
-        "Securities Law",
-        "Compliance & Regulatory",
-        "Corporate Finance",
+        {
+          name: "Business Formation",
+          description:
+            "Complete business formation services including entity selection, registration, and initial corporate governance setup.",
+        },
+        {
+          name: "Mergers & Acquisitions",
+          description:
+            "Expert guidance through complex M&A transactions including due diligence, negotiations, and transaction structuring.",
+        },
+        {
+          name: "Corporate Governance",
+          description:
+            "Comprehensive corporate governance services including board management, compliance, and best practices implementation.",
+        },
+        {
+          name: "Commercial Litigation",
+          description:
+            "Aggressive representation in commercial disputes including contract breaches, business torts, and complex litigation.",
+        },
+        {
+          name: "Commercial Contracts",
+          description:
+            "Drafting and negotiation of commercial agreements including supply contracts, distribution agreements, and service contracts.",
+        },
+        {
+          name: "Joint Ventures",
+          description:
+            "Legal structuring and documentation of joint venture agreements and strategic business partnerships.",
+        },
+        {
+          name: "Corporate Restructuring",
+          description:
+            "Strategic corporate restructuring including reorganizations, spin-offs, and business transformation initiatives.",
+        },
+        {
+          name: "Securities Law",
+          description:
+            "Comprehensive securities law services including compliance, reporting, and regulatory guidance.",
+        },
+        {
+          name: "Compliance & Regulatory",
+          description:
+            "Ongoing regulatory compliance services to ensure adherence to applicable laws and regulations.",
+        },
+        {
+          name: "Corporate Finance",
+          description:
+            "Legal support for corporate financing including debt and equity transactions, and capital raising activities.",
+        },
       ],
       keyFeatures: [
         "Strategic business planning and legal structure optimization",
@@ -208,16 +408,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our banking and financial law practice helps clients navigate complex financial regulations and banking transactions with expertise and precision, ensuring compliance and protecting financial interests.",
       services: [
-        "Loan Agreements",
-        "Credit Facilities",
-        "Financial Transactions",
-        "Banking Regulations",
-        "Securities Compliance",
-        "Financial Disputes",
-        "Regulatory Compliance",
-        "Investment Law",
-        "Banking Litigation",
-        "Fintech Law",
+        {
+          name: "Loan Agreements",
+          description:
+            "Drafting and negotiation of loan documentation including commercial loans, mortgages, and credit facilities.",
+        },
+        {
+          name: "Credit Facilities",
+          description:
+            "Legal structuring of credit facilities including revolving credit, term loans, and working capital financing.",
+        },
+        {
+          name: "Financial Transactions",
+          description:
+            "Comprehensive legal support for complex financial transactions including derivatives and structured products.",
+        },
+        {
+          name: "Banking Regulations",
+          description:
+            "Expert guidance on banking regulations, compliance requirements, and regulatory reporting obligations.",
+        },
+        {
+          name: "Securities Compliance",
+          description:
+            "Securities law compliance including registration, reporting, and ongoing regulatory obligations.",
+        },
+        {
+          name: "Financial Disputes",
+          description:
+            "Resolution of financial disputes including loan defaults, payment disputes, and financial contract breaches.",
+        },
+        {
+          name: "Regulatory Compliance",
+          description:
+            "Ongoing regulatory compliance services for financial institutions and financial service providers.",
+        },
+        {
+          name: "Investment Law",
+          description:
+            "Legal guidance on investment activities including fund formation, investment management, and regulatory compliance.",
+        },
+        {
+          name: "Banking Litigation",
+          description:
+            "Aggressive representation in banking-related litigation and regulatory enforcement actions.",
+        },
+        {
+          name: "Fintech Law",
+          description:
+            "Specialized legal services for financial technology companies including regulatory compliance and innovation support.",
+        },
       ],
       keyFeatures: [
         "Expert knowledge of financial regulations",
@@ -242,16 +482,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our criminal defense team provides vigorous representation for individuals facing criminal charges, ensuring your rights are protected throughout the legal process with strategic defense tactics.",
       services: [
-        "Criminal Defense",
-        "Strategic Legal Counsel",
-        "Evidence Analysis",
-        "Courtroom Advocacy",
-        "DUI/DWI Cases",
-        "White Collar Crimes",
-        "Traffic Violations",
-        "Appeals",
-        "Plea Negotiations",
-        "Bail Hearings",
+        {
+          name: "Criminal Defense",
+          description:
+            "Comprehensive criminal defense representation for all types of criminal charges with aggressive legal strategies.",
+        },
+        {
+          name: "Strategic Legal Counsel",
+          description:
+            "Strategic legal advice and case planning to develop the strongest possible defense strategy for your case.",
+        },
+        {
+          name: "Evidence Analysis",
+          description:
+            "Thorough analysis of evidence, witness statements, and case materials to identify weaknesses in the prosecution's case.",
+        },
+        {
+          name: "Courtroom Advocacy",
+          description:
+            "Expert courtroom representation including trial advocacy, cross-examination, and persuasive argumentation.",
+        },
+        {
+          name: "DUI/DWI Cases",
+          description:
+            "Specialized defense for driving under the influence cases including breathalyzer challenges and procedural defenses.",
+        },
+        {
+          name: "White Collar Crimes",
+          description:
+            "Expert defense for white-collar criminal charges including fraud, embezzlement, and financial crimes.",
+        },
+        {
+          name: "Traffic Violations",
+          description:
+            "Legal representation for traffic violations and moving violations to minimize penalties and protect your driving record.",
+        },
+        {
+          name: "Appeals",
+          description:
+            "Appellate representation to challenge criminal convictions and seek justice through the appeals process.",
+        },
+        {
+          name: "Plea Negotiations",
+          description:
+            "Strategic plea negotiations to achieve the best possible outcome and minimize penalties when appropriate.",
+        },
+        {
+          name: "Bail Hearings",
+          description:
+            "Representation at bail hearings to secure release from custody and protect your freedom during legal proceedings.",
+        },
       ],
       keyFeatures: [
         "Aggressive defense strategies",
@@ -276,16 +556,56 @@ const PracticeAreaDetailPage = () => {
       detailedDescription:
         "Our family law practice provides sensitive and comprehensive legal services for personal matters, ensuring your family's interests are protected during difficult times with empathy and expertise.",
       services: [
-        "Divorce & Separation",
-        "Child Custody",
-        "Property Division",
-        "Family Mediation",
-        "Adoption",
-        "Estate Planning",
-        "Will & Trusts",
-        "Domestic Violence",
-        "Prenuptial Agreements",
-        "Guardianship",
+        {
+          name: "Divorce & Separation",
+          description:
+            "Compassionate legal guidance through divorce and separation proceedings with focus on fair resolution and family preservation.",
+        },
+        {
+          name: "Child Custody",
+          description:
+            "Expert representation in child custody matters to ensure the best interests of children are protected and maintained.",
+        },
+        {
+          name: "Property Division",
+          description:
+            "Fair and equitable division of marital property and assets during divorce proceedings with comprehensive asset evaluation.",
+        },
+        {
+          name: "Family Mediation",
+          description:
+            "Professional mediation services to resolve family disputes amicably and avoid costly litigation when possible.",
+        },
+        {
+          name: "Adoption",
+          description:
+            "Comprehensive legal support for adoption proceedings including domestic and international adoption processes.",
+        },
+        {
+          name: "Estate Planning",
+          description:
+            "Strategic estate planning services to protect family wealth and ensure proper distribution of assets.",
+        },
+        {
+          name: "Will & Trusts",
+          description:
+            "Drafting and management of wills, trusts, and estate planning documents to secure your family's future.",
+        },
+        {
+          name: "Domestic Violence",
+          description:
+            "Protective legal services for victims of domestic violence including restraining orders and safety planning.",
+        },
+        {
+          name: "Prenuptial Agreements",
+          description:
+            "Drafting and negotiation of prenuptial agreements to protect assets and clarify financial expectations.",
+        },
+        {
+          name: "Guardianship",
+          description:
+            "Legal assistance with guardianship proceedings for minors and incapacitated adults requiring protection.",
+        },
       ],
       keyFeatures: [
         "Sensitive handling of family matters",
@@ -357,25 +677,15 @@ const PracticeAreaDetailPage = () => {
 
         <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center mb-4">
-              <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
-              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-secondary-500">
-                LEGAL EXPERTISE
-              </span>
-              <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
-            </div>
-
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-secondary-600 to-secondary-700 text-white">
                 <IconComponent className="w-10 h-10" />
               </div>
             </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
               {currentArea.title}
             </h1>
-
-            <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-2xl text-slate-300 max-w-5xl mx-auto leading-relaxed">
               {currentArea.detailedDescription}
             </p>
           </div>
@@ -396,49 +706,25 @@ const PracticeAreaDetailPage = () => {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center mb-4">
-              <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
-              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-secondary-500">
-                OUR SERVICES
-              </span>
-              <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4">
-              Comprehensive Legal Services
-            </h2>
-            <p className="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto">
-              We provide a full range of legal services in{" "}
-              {currentArea.title.toLowerCase()}, ensuring comprehensive coverage
-              for all your legal needs.
-            </p>
-          </motion.div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {currentArea.services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border-2 border-slate-200 hover:border-secondary-300 transition-all duration-300 p-6 text-center group"
+                className="bg-white border-2 border-slate-200 hover:border-burgundy transition-all duration-500 p-6 text-left group hover:shadow-lg"
               >
-                <div className="flex items-center justify-center mb-4">
-                  <TbCloverFilled className="w-6 h-6 text-secondary-500 group-hover:text-secondary-600 transition-colors duration-300" />
+                <div className="flex items-center gap-4 lg:gap-6 mb-2.5 lg:mb-3">
+                  <div className="flex items-center justify-center">
+                    <TbCloverFilled className="w-6 h-6 text-burgundy/80 group-hover:text-burgundy transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-slate-800 font-bold text-lg lg:text-[1.2rem]  group-hover:text-burgundy/90 transition-colors duration-300">
+                    {service.name}
+                  </h3>
                 </div>
-                <span className="text-slate-700 font-medium text-sm">
-                  {service}
-                </span>
-              </motion.div>
+                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -454,13 +740,6 @@ const PracticeAreaDetailPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center mb-4">
-              <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
-              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-secondary-500">
-                WHY CHOOSE US
-              </span>
-              <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
-            </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4">
               Why Choose Our {currentArea.title}
             </h2>
@@ -556,7 +835,7 @@ const PracticeAreaDetailPage = () => {
                 Need {currentArea.title} Services?
               </h3>
               <p className="text-slate-300 text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
-                Contact our experienced attorneys for expert legal guidance and
+                Contact our experienced lawyers for expert legal guidance and
                 representation in {currentArea.title.toLowerCase()}.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

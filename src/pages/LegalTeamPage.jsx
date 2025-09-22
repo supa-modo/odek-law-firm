@@ -12,10 +12,10 @@ import Footer from "../components/Footer";
 import { FaClover } from "react-icons/fa6";
 
 const LegalTeamPage = () => {
-  const attorneys = [
+  const lawyers = [
     {
       id: 1,
-      name: "Example Name",
+      name: "Example Name Obel",
       position: "Senior Partner & Managing Director",
       // specialization: "Corporate & Commercial Law",
       experience: "25+ Years",
@@ -39,7 +39,7 @@ const LegalTeamPage = () => {
       experience: "18+ Years",
       image: "/lawyer002.jpg",
       description:
-        "A formidable criminal defense attorney with an exceptional track record in high-profile cases. Sarah's strategic approach and courtroom expertise have secured favorable outcomes for countless clients.",
+        "A formidable criminal defense lawyer with an exceptional track record in high-profile cases. Sarah's strategic approach and courtroom expertise have secured favorable outcomes for countless clients.",
       achievements: [
         "95% Case Success",
         "200+ Cases Defended",
@@ -167,14 +167,14 @@ const LegalTeamPage = () => {
 
             <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               With a wealth of experience across a wide range of practice areas,
-              our expert attorneys are passionate about advocating for your
-              rights and delivering exceptional legal solutions.
+              our expert lawyers are passionate about advocating for your rights
+              and delivering exceptional legal solutions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Attorneys Section */}
+      {/* Featured lawyers Section */}
       <section className="md:py-20 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -190,9 +190,9 @@ const LegalTeamPage = () => {
         <div className="max-w-screen-2xl mx-auto md:px-6 lg:px-14 relative z-10">
           {/* Top Row */}
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 items-center">
-            {/* Two Attorneys */}
+            {/* Two lawyers */}
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-14">
-              {/* Attorney 1 */}
+              {/* lawyer 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -202,34 +202,34 @@ const LegalTeamPage = () => {
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
-                    src={attorneys[0].image}
-                    alt={attorneys[0].name}
+                    src={lawyers[0].image}
+                    alt={lawyers[0].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Dark overlay at bottom for name and position */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
                     <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
-                      {attorneys[0].name}
+                      {lawyers[0].name}
                     </h3>
                     <p className="text-white/90 font-semibold text-[1.1rem]">
-                      {attorneys[0].position}
+                      {lawyers[0].position}
                     </p>
                   </div>
                   {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
-                      {attorneys[0].specialization}
+                      {lawyers[0].specialization}
                     </span>
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
                   <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
-                    {attorneys[0].description.substring(0, 220)}...
+                    {lawyers[0].description.substring(0, 220)}...
                   </p>
                 </div>
               </motion.div>
 
-              {/* Attorney 2 */}
+              {/* lawyer 2 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -239,29 +239,29 @@ const LegalTeamPage = () => {
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
-                    src={attorneys[1].image}
-                    alt={attorneys[1].name}
+                    src={lawyers[1].image}
+                    alt={lawyers[1].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Dark overlay at bottom for name and position */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
                     <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
-                      {attorneys[1].name}
+                      {lawyers[1].name}
                     </h3>
                     <p className="text-white/90 font-semibold text-[1.1rem]">
-                      {attorneys[1].position}
+                      {lawyers[1].position}
                     </p>
                   </div>
                   {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
-                      {attorneys[1].specialization}
+                      {lawyers[1].specialization}
                     </span>
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
                   <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
-                    {attorneys[1].description.substring(0, 220)}...
+                    {lawyers[1].description.substring(0, 220)}...
                   </p>
                 </div>
               </motion.div>
@@ -284,7 +284,7 @@ const LegalTeamPage = () => {
                 Decades of Legal Excellence
               </h2>
               <p className="text-slate-600 text-[1.1rem] lg:text-xl leading-relaxed">
-                Our attorneys combine deep legal knowledge with practical
+                Our lawyers combine deep legal knowledge with practical
                 experience to deliver results that exceed expectations. From
                 complex corporate transactions to personal injury cases, we
                 bring the expertise you need.
@@ -330,9 +330,9 @@ const LegalTeamPage = () => {
                   Ready to Get Started?
                 </h3>
                 <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
-                  Don't face legal challenges alone. Our experienced attorneys
-                  are here to provide the guidance and representation you need
-                  to achieve the best possible outcome.
+                  Don't face legal challenges alone. Our experienced lawyers are
+                  here to provide the guidance and representation you need to
+                  achieve the best possible outcome.
                 </p>
                 <div className="flex flex-col md:flex-row gap-4">
                   <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2.5 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
@@ -348,9 +348,9 @@ const LegalTeamPage = () => {
               </div>
             </motion.div>
 
-            {/* Two Attorneys */}
+            {/* Two lawyers */}
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-14">
-              {/* Attorney 3 */}
+              {/* lawyer 3 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -360,34 +360,34 @@ const LegalTeamPage = () => {
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
-                    src={attorneys[2].image}
-                    alt={attorneys[2].name}
+                    src={lawyers[2].image}
+                    alt={lawyers[2].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Dark overlay at bottom for name and position */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
                     <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
-                      {attorneys[2].name}
+                      {lawyers[2].name}
                     </h3>
                     <p className="text-white/90 font-semibold text-[1.1rem]">
-                      {attorneys[2].position}
+                      {lawyers[2].position}
                     </p>
                   </div>
                   {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
-                      {attorneys[2].specialization}
+                      {lawyers[2].specialization}
                     </span>
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
                   <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
-                    {attorneys[2].description.substring(0, 220)}...
+                    {lawyers[2].description.substring(0, 220)}...
                   </p>
                 </div>
               </motion.div>
 
-              {/* Attorney 4 */}
+              {/* lawyer 4 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -397,29 +397,29 @@ const LegalTeamPage = () => {
               >
                 <div className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <img
-                    src={attorneys[3].image}
-                    alt={attorneys[3].name}
+                    src={lawyers[3].image}
+                    alt={lawyers[3].name}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Dark overlay at bottom for name and position */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6">
                     <h3 className="text-secondary-600 text-2xl font-extrabold tracking-wide mb-1">
-                      {attorneys[3].name}
+                      {lawyers[3].name}
                     </h3>
                     <p className="text-white/90 font-semibold text-[1.1rem]">
-                      {attorneys[3].position}
+                      {lawyers[3].position}
                     </p>
                   </div>
                   {/* Specialization badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-secondary-700/90 text-white px-3 py-1 text-sm font-semibold backdrop-blur-sm">
-                      {attorneys[3].specialization}
+                      {lawyers[3].specialization}
                     </span>
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
                   <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
-                    {attorneys[3].description.substring(0, 220)}...
+                    {lawyers[3].description.substring(0, 220)}...
                   </p>
                 </div>
               </motion.div>
@@ -441,9 +441,9 @@ const LegalTeamPage = () => {
                   Ready to Get Started?
                 </h3>
                 <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
-                  Don't face legal challenges alone. Our experienced attorneys
-                  are here to provide the guidance and representation you need
-                  to achieve the best possible outcome.
+                  Don't face legal challenges alone. Our experienced lawyers are
+                  here to provide the guidance and representation you need to
+                  achieve the best possible outcome.
                 </p>
                 <div className="flex flex-col md:flex-row gap-2.5 md:gap-3 lg:gap-4">
                   <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-3 font-bold lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">

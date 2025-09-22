@@ -80,7 +80,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#services"
+                      href="/practice-areas"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       Practice Areas

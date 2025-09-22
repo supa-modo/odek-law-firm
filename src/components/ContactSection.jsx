@@ -255,7 +255,7 @@ const ContactSection = () => {
 
                     <p className="pt-2 text-[0.95rem] md:text-base text-slate-600 text-center leading-relaxed">
                       All consultations are confidential and protected by
-                      attorney-client privilege.
+                      lawyer-client privilege.
                     </p>
                   </div>
                 </form>
