@@ -1,6 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { TbSend } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -79,12 +80,12 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/practice-areas"
+                    <Link
+                      to="/practice-areas"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       Practice Areas
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -104,12 +105,12 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
-                    <a
-                      href="/legal-team"
+                    <Link
+                      to="/legal-team"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       Our Legal Team
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a

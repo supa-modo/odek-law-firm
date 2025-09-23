@@ -117,7 +117,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <div className="ml-10 flex items-center font-outfit uppercase text-[0.93rem] space-x-3">
+            <div className="ml-10 flex items-center font-outfit uppercase text-[0.9rem] space-x-2.5">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={item.to}>
                   {item.to.startsWith("/#") ? (
@@ -136,7 +136,13 @@ const Header = () => {
                       onMouseEnter={() => setIsPracticeAreasOpen(true)}
                       onMouseLeave={() => setIsPracticeAreasOpen(false)}
                     >
-                      <button className="text-gray-500 hover:text-burgundy-900 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group">
+                      <button
+                        className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group relative ${
+                          location.pathname === item.to
+                            ? "text-secondary-700"
+                            : ""
+                        }`}
+                      >
                         {item.label}
                         <motion.div
                           animate={{

@@ -3,15 +3,8 @@ import { FaBalanceScale, FaHome } from "react-icons/fa";
 import { GiHandcuffs } from "react-icons/gi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
 import { PiBuildingsDuotone } from "react-icons/pi";
-import {
-  TbScale,
-  TbReceiptTax,
-  TbHome,
-  TbBriefcase,
-  TbBuilding,
-  TbShield,
-  TbBuildingBank,
-} from "react-icons/tb";
+import { TbReceiptTax, TbBriefcase, TbBuildingBank } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   const practiceAreas = [
@@ -84,15 +77,15 @@ const AboutSection = () => {
                 delivering innovative solutions and trusted advice for our
                 clients.
               </p>
-              <a
-                href="/practice-areas"
+              <Link
+                to="/practice-areas"
                 className="inline-flex items-center text-secondary-700 uppercase hover:text-red-700 font-bold text-[0.9rem] lg:text-base mt-4 lg:mt-6 group transition-colors duration-300"
               >
                 <span className="underline underline-offset-4">Learn More</span>
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                   →
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -133,7 +126,7 @@ const AboutSection = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-600 text-lg lg:text-[1.35rem]">
+                    <p className="text-slate-700 text-lg lg:text-[1.35rem]">
                       {area.description}
                     </p>
                   </div>

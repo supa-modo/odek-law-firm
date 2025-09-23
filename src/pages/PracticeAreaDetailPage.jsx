@@ -24,6 +24,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GiHandcuffs } from "react-icons/gi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
+import { PiBuildingsBold, PiBuildingsDuotone } from "react-icons/pi";
 
 const PracticeAreaDetailPage = () => {
   const { areaId } = useParams();
@@ -328,7 +329,7 @@ const PracticeAreaDetailPage = () => {
     corporate: {
       id: "corporate",
       title: "Corporate & Commercial Law",
-      icon: FaBuilding,
+      icon: PiBuildingsBold,
       description:
         "Full-service corporate legal support including business formation, mergers & acquisitions, corporate governance, and commercial litigation.",
       detailedDescription:
@@ -678,11 +679,11 @@ const PracticeAreaDetailPage = () => {
         <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-secondary-600 to-secondary-700 text-white">
-                <IconComponent className="w-10 h-10" />
+              <div className="inline-flex items-center justify-center w-16 lg:w-20 h-16 lg:h-20 rounded-full bg-white text-secondary-800">
+                <IconComponent className="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-secondary-300 mb-3 md:mb-4 lg:mb-6 leading-tight">
               {currentArea.title}
             </h1>
             <p className="text-lg lg:text-2xl text-slate-300 max-w-5xl mx-auto leading-relaxed">
@@ -693,7 +694,7 @@ const PracticeAreaDetailPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
+      <section className="py-5 md:py-8 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div
@@ -705,9 +706,9 @@ const PracticeAreaDetailPage = () => {
           ></div>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-14 relative z-10">
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {currentArea.services.map((service, index) => (
               <div
                 key={index}
@@ -721,7 +722,7 @@ const PracticeAreaDetailPage = () => {
                     {service.name}
                   </h3>
                 </div>
-                <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] leading-relaxed">
+                <p className="text-slate-800 text-[1.1rem] lg:text-[1.2rem] leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -731,19 +732,19 @@ const PracticeAreaDetailPage = () => {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white relative">
+      <section className="py-10 lg:py-16 bg-white relative">
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-14">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-6 md:mb-10 lg:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-3 md:mb-4">
               Why Choose Our {currentArea.title}
             </h2>
-            <p className="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-[1.15rem] md:text-xl lg:text-2xl text-slate-700 max-w-4xl mx-auto">
               Our approach combines deep legal expertise with practical
               solutions tailored to your specific needs
             </p>
@@ -756,21 +757,21 @@ const PracticeAreaDetailPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-6"
+              className="space-y-3 md:space-y-4 lg:space-y-5"
             >
               <div>
-                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-burgundy">
                   KEY FEATURES
                 </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 mb-2 md:mb-4 lg:mb-6">
                   What Sets Us Apart
                 </h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-3">
                 {currentArea.keyFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start">
-                    <TbCloverFilled className="w-5 h-5 text-secondary-500 mr-4 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-[1.1rem] leading-relaxed">
+                    <TbCloverFilled className="w-5 h-5 text-primary-500 mr-4 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700 text-[1.15rem] lg:text-[1.3rem] leading-relaxed">
                       {feature}
                     </span>
                   </div>
@@ -784,21 +785,21 @@ const PracticeAreaDetailPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-3 md:space-y-4 lg:space-y-5"
             >
               <div>
-                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-primary-600">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-600">
                   OUR TRACK RECORD
                 </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 mb-2 md:mb-4 lg:mb-6">
                   Proven Results
                 </h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-3">
                 {currentArea.whyChooseUs.map((reason, index) => (
-                  <div key={index} className="flex items-start">
-                    <TbCloverFilled className="w-5 h-5 text-secondary-500 mr-4 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-[1.1rem] leading-relaxed">
+                  <div key={index} className="flex items-center">
+                    <TbCloverFilled className="w-5 h-5 text-primary-500 mr-4 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700 text-[1.15rem] lg:text-[1.3rem] leading-relaxed">
                       {reason}
                     </span>
                   </div>
@@ -806,54 +807,40 @@ const PracticeAreaDetailPage = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url(/courtroom.jpg)",
-              filter: "blur(1px)",
-            }}
-          ></div>
-        </div>
-
-        <div className="max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-secondary-700/30 to-secondary-600/30 backdrop-blur-sm p-8 md:p-12 border border-secondary-500/20">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-                Need {currentArea.title} Services?
-              </h3>
-              <p className="text-slate-300 text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
-                Contact our experienced lawyers for expert legal guidance and
-                representation in {currentArea.title.toLowerCase()}.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-burgundy hover:bg-burgundy/80 text-white px-8 py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
-                  <span className="flex items-center justify-center gap-3">
-                    <TbPhoneCall className="w-5 h-5" />
-                    <span>Schedule Consultation</span>
-                    <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-                <Link to="/practice-areas">
-                  <button className="bg-transparent border-2 border-secondary-500 text-secondary-400 hover:bg-secondary-500/10 px-8 py-3 font-semibold text-lg transition-all duration-300">
-                    View All Practice Areas
+          {/* Bottom CTA Section */}
+          <div className="pt-16 md:pt-20 lg:pt-24 max-w-screen-2xl mx-auto  relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="pt-8 md:pt-10 ">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-600 mb-4">
+                  Need {currentArea.title} Services?
+                </h3>
+                <p className="text-slate-700 text-[1.2rem] md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto">
+                  Don't face legal challenges alone. Our experienced lawyers are
+                  here to provide the guidance and representation you need to
+                  achieve the best possible outcome.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-2.5 lg:gap-4 justify-center">
+                  <button className="w-full md:w-auto bg-primary-700 hover:bg-primary-800 text-white px-8 py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                    <span className="flex items-center justify-center gap-3">
+                      <span>Schedule Consultation</span>
+                      <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
                   </button>
-                </Link>
+                  <Link to="/practice-areas">
+                    <button className="w-full md:w-auto bg-transparent border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900/10 px-8 py-3 font-bold text-lg transition-all duration-300">
+                      View All Practice Areas
+                    </button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

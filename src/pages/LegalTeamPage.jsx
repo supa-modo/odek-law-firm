@@ -21,7 +21,7 @@ const LegalTeamPage = () => {
       experience: "25+ Years",
       image: "/lawyer03.jpg",
       description:
-        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation handling multi-million shillingstransactions and complex legal disputes.",
+        "Leading our firm with over two decades of experience in corporate law, mergers & acquisitions, and commercial litigation handling multi-million shilling transactions and complex legal disputes.",
       achievements: [
         "500+ Cases Won",
         "98% Success Rate",
@@ -175,7 +175,7 @@ const LegalTeamPage = () => {
       </section>
 
       {/* Featured lawyers Section */}
-      <section className="md:py-20 lg:py-24 bg-gradient-to-br from-slate-100 to-slate-200 relative">
+      <section className="py-6 md:py-10 bg-gradient-to-br from-slate-100 to-slate-200 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -187,7 +187,19 @@ const LegalTeamPage = () => {
           ></div>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto md:px-6 lg:px-14 relative z-10">
+        <div className="max-w-screen-2xl mx-auto md:px-8 lg:px-14 relative z-10">
+          {/* Section Header */}
+          <div className="px-2 md:px-0 mb-6 md:mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2 md:mb-3 lg:mb-4 leading-tight">
+              The Minds Behind Our Success
+            </h2>
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-700">
+              Our expert lawyers combine deep legal knowledge with practical
+              experience to deliver results that exceed expectations. From
+              complex corporate transactions to personal injury cases, we bring
+              the expertise you need.
+            </p>
+          </div>
           {/* Top Row */}
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 items-center">
             {/* Two lawyers */}
@@ -223,7 +235,7 @@ const LegalTeamPage = () => {
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
-                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                  <p className="text-slate-700 text-[1.1rem] md:text-[1.15rem] lg:text-[1.2rem] mt-6">
                     {lawyers[0].description.substring(0, 220)}...
                   </p>
                 </div>
@@ -260,7 +272,7 @@ const LegalTeamPage = () => {
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
-                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                  <p className="text-slate-700 text-[1.1rem] md:text-[1.15rem] lg:text-[1.2rem] mt-6">
                     {lawyers[1].description.substring(0, 220)}...
                   </p>
                 </div>
@@ -273,23 +285,23 @@ const LegalTeamPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="hidden md:block space-y-4 md:space-y-5  lg:col-span-2"
+              className="hidden lg:block space-y-4 md:space-y-5 lg:space-y-6  lg:col-span-2"
             >
               <div>
-                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-primary-600">
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-primary-600">
                   EXPERTISE & EXPERIENCE
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 leading-tight">
                 Decades of Legal Excellence
               </h2>
-              <p className="text-slate-600 text-[1.1rem] lg:text-xl leading-relaxed">
+              <p className="text-slate-600 text-[1.1rem] md:text-[1.15rem] lg:text-2xl leading-relaxed">
                 Our lawyers combine deep legal knowledge with practical
                 experience to deliver results that exceed expectations. From
                 complex corporate transactions to personal injury cases, we
                 bring the expertise you need.
               </p>
-              <div className="space-y-4 text-[1.1rem] lg:text-xl">
+              <div className="space-y-4 text-[1.1rem] lg:text-[1.3rem]">
                 <div className="flex items-center space-x-3">
                   <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
                   <span className="text-slate-700 font-semibold">
@@ -320,7 +332,7 @@ const LegalTeamPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:block lg:col-span-2 lg:pt-24"
+              className="hidden lg:block lg:col-span-2 lg:pt-24"
             >
               <div className="relative z-10">
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
@@ -381,7 +393,7 @@ const LegalTeamPage = () => {
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
-                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                  <p className="text-slate-600 text-[1.1rem] md:text-[1.15rem] mt-6">
                     {lawyers[2].description.substring(0, 220)}...
                   </p>
                 </div>
@@ -418,7 +430,7 @@ const LegalTeamPage = () => {
                   </div>
                 </div>
                 <div className="px-2 md:px-0">
-                  <p className="text-slate-600 text-[1.1rem] lg:text-[1.15rem] mt-6">
+                  <p className="text-slate-600 text-[1.1rem] md:text-[1.15rem] mt-6">
                     {lawyers[3].description.substring(0, 220)}...
                   </p>
                 </div>
@@ -427,20 +439,64 @@ const LegalTeamPage = () => {
 
             {/* Text Block */}
             <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="lg:hidden block space-y-4 md:space-y-5  lg:col-span-2 px-3 md:px-0"
+            >
+              <div>
+                <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-primary-600">
+                  EXPERTISE & EXPERIENCE
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 leading-tight">
+                Decades of Legal Excellence
+              </h2>
+              <p className="text-slate-600 text-[1.1rem] lg:text-xl leading-relaxed">
+                Our lawyers combine deep legal knowledge with practical
+                experience to deliver results that exceed expectations. From
+                complex corporate transactions to personal injury cases, we
+                bring the expertise you need.
+              </p>
+              <div className="space-y-2 text-[1.1rem] lg:text-xl">
+                <div className="flex items-center space-x-3">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
+                    25+ Years Combined Experience
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
+                    98% Success Rate
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <TbCloverFilled className=" text-secondary-700 w-4 h-4" />
+                  <span className="text-slate-700 font-semibold">
+                    500+ Cases Won
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Text Block */}
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.9, delay: 0.1 }}
-              className="md:hidden block lg:col-span-2 py-10 px-3 md:px-0"
+              className="lg:hidden block lg:col-span-2 py-10 px-3 md:px-0"
             >
               <div className="relative z-10">
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
                 </span>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-4 mb-6">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-2 mb-3">
                   Ready to Get Started?
                 </h3>
-                <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
+                <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-5">
                   Don't face legal challenges alone. Our experienced lawyers are
                   here to provide the guidance and representation you need to
                   achieve the best possible outcome.

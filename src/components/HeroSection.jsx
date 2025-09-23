@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TbArrowRight, TbPhoneCall } from "react-icons/tb";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   // Carousel data with images and matching content
   const carouselData = [
     {
@@ -281,7 +284,7 @@ const HeroSection = () => {
             {/* Call-to-Action Buttons */}
             <div className="flex gap-4">
               <button
-                className="bg-secondary-700 hover:bg-secondary-800 group text-white px-4 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-secondary-600/30"
+                className="bg-secondary-700 hover:bg-secondary-800 group text-white px-4 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-secondary-600/30 hover:cursor-pointer"
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => setIsAutoPlaying(true)}
               >
@@ -292,7 +295,10 @@ const HeroSection = () => {
                 </span>
               </button>
               <button
-                className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-6 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform backdrop-blur-sm"
+                onClick={() => {
+                  navigate("/practice-areas");
+                }}
+                className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-6 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all hover:cursor-pointer duration-300 transform backdrop-blur-sm"
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => setIsAutoPlaying(true)}
               >

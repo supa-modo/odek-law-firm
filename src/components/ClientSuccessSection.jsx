@@ -206,7 +206,7 @@ const ClientSuccessSection = () => {
         ></div>
       </div>
 
-      <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
+      <div className="max-w-[95%] mx-auto md:px-3 lg:px-14 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center mb-4">
@@ -219,7 +219,7 @@ const ClientSuccessSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
             Proven Results & Client Satisfaction
           </h2>
-          <p className="text-lg lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
             Our track record speaks for itself. Discover how we've helped
             clients achieve successful outcomes across various legal matters
             with dedication and expertise.
@@ -290,7 +290,7 @@ const ClientSuccessSection = () => {
                 </h4>
 
                 {/* Description */}
-                <p className="text-gray-500 mb-4 text-lg lg:text-[1.15rem] font-medium leading-relaxed">
+                <p className="text-slate-800 mb-4 text-lg lg:text-[1.2rem] leading-relaxed">
                   {story.description}
                 </p>
 

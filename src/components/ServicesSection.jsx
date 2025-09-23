@@ -13,7 +13,7 @@ const ServicesSection = () => {
                 Your Legal Rights Matter. We're Here to Protect Them.
               </h2>
 
-              <div className="space-y-4 md:space-y-6 text-slate-600">
+              <div className="space-y-4 md:space-y-6 text-slate-800">
                 <p className="text-[1.15rem] lg:text-2xl leading-relaxed">
                   Whether you're a business owner navigating corporate
                   regulations, an individual facing legal challenges, or a
@@ -37,7 +37,7 @@ const ServicesSection = () => {
                   </span>
                 </a>
 
-                <p className="text-[1.15rem] lg:text-2xl text-slate-600 mt-3 leading-">
+                <p className="text-[1.15rem] lg:text-2xl text-slate-800 mt-3 leading-">
                   Legal matters can be complex and overwhelming. Our team is
                   here to guide you through every step, ensuring your rights are
                   protected and your interests are served.

@@ -23,6 +23,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GiHandcuffs } from "react-icons/gi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
+import { PiBuildingsDuotone } from "react-icons/pi";
 
 const PracticeAreasPage = () => {
   const practiceAreas = [
@@ -57,7 +58,7 @@ const PracticeAreasPage = () => {
     {
       id: "corporate",
       title: "Corporate & Commercial Law",
-      icon: FaBuilding,
+      icon: PiBuildingsDuotone,
       description:
         "Full-service corporate legal support including business formation, mergers & acquisitions, corporate governance, and commercial litigation.",
     },
@@ -118,7 +119,7 @@ const PracticeAreasPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
-              Practice Areas
+              Our Practice Areas
             </h1>
 
             <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -152,6 +153,7 @@ const PracticeAreasPage = () => {
                   key={area.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.3 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
@@ -188,10 +190,11 @@ const PracticeAreasPage = () => {
           </div>
         </div>
 
-        <div className="pt-16 md:pt-20 lg:pt-24 max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
+        <div className="pt-16 md:pt-20 lg:pt-24 max-w-screen-2xl mx-auto px-4 lg:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -199,20 +202,20 @@ const PracticeAreasPage = () => {
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary-700 mb-4">
                 Ready to Begin?
               </h3>
-              <p className="text-slate-800 text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto">
+              <p className="text-slate-700 text-[1.2rem] md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto">
                 Don't face legal challenges alone. Our experienced lawyers are
                 here to provide the guidance and representation you need to
                 achieve the best possible outcome.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary-700 hover:bg-primary-800 text-white px-8 py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+              <div className="flex flex-col sm:flex-row gap-2.5 lg:gap-4 justify-center">
+                <button className="w-full md:w-auto bg-primary-700 hover:bg-primary-800 text-white px-8 py-3 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                   <span className="flex items-center justify-center gap-3">
                     <span>Schedule Consultation</span>
                     <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
                 <Link to="/legal-team">
-                  <button className="bg-transparent border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900/10 px-8 py-3 font-semibold text-lg transition-all duration-300">
+                  <button className="w-full md:w-auto bg-transparent border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900/10 px-8 py-3 font-semibold text-lg transition-all duration-300">
                     View Our Legal Team
                   </button>
                 </Link>

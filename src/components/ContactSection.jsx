@@ -49,7 +49,7 @@ const ContactSection = () => {
       </div>
 
       <div>
-        <div className="max-w-[95%] mx-auto md:px-6 lg:px-14 relative z-10">
+        <div className="max-w-[95%] mx-auto md:px-3 lg:px-14 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-10 md:mb-12 lg:mb-16">
             <div className="inline-flex items-center mb-4">
@@ -62,7 +62,7 @@ const ContactSection = () => {
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-1.5 md:mb-3 lg:mb-4 leading-tight">
               Ready to Discuss Your Legal Needs?
             </h2>
-            <p className="text-[1.15rem] lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-[1.15rem] lg:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
               Contact our experienced legal team today for a confidential
               consultation. We're here to provide expert guidance and protect
               your interests.
