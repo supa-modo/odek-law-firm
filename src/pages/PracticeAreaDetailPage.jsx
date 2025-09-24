@@ -712,13 +712,13 @@ const PracticeAreaDetailPage = () => {
             {currentArea.services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-slate-200 hover:border-burgundy transition-all duration-500 p-6 text-left group hover:shadow-lg"
+                className="bg-white border-2 border-slate-200 hover:border-primary-500 transition-all duration-500 p-6 text-left group hover:shadow-lg"
               >
                 <div className="flex items-center gap-4 lg:gap-6 mb-2.5 lg:mb-3">
                   <div className="flex items-center justify-center">
-                    <TbCloverFilled className="w-6 h-6 text-burgundy/80 group-hover:text-burgundy transition-colors duration-300" />
+                    <TbCloverFilled className="w-6 h-6 text-primary-500 group-hover:text-primary-600 transition-colors duration-300" />
                   </div>
-                  <h3 className="text-slate-800 font-bold text-lg lg:text-[1.2rem]  group-hover:text-burgundy/90 transition-colors duration-300">
+                  <h3 className="text-slate-800 font-bold text-lg lg:text-[1.2rem]  group-hover:text-primary-600 transition-colors duration-300">
                     {service.name}
                   </h3>
                 </div>
@@ -833,7 +833,7 @@ const PracticeAreaDetailPage = () => {
                     </span>
                   </button>
                   <Link to="/practice-areas">
-                    <button className="w-full md:w-auto bg-transparent border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900/10 px-8 py-3 font-bold text-lg transition-all duration-300">
+                    <button className="w-full md:w-auto bg-transparent border-2 border-secondary-600 text-secondary-700 hover:bg-secondary-900/10 px-8 py-3 font-bold text-lg transition-all duration-300">
                       View All Practice Areas
                     </button>
                   </Link>

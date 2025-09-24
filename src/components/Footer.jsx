@@ -59,9 +59,6 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-8">
               {/* Quick Links */}
               <div>
-                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 text-secondary-200">
-                  Quick Links
-                </h4>
                 <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
@@ -88,6 +85,14 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link
+                      to="/legal-team"
+                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
+                    >
+                      Our Legal Team
+                    </Link>
+                  </li>
+                  <li>
                     <a
                       href="#contact"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
@@ -98,45 +103,34 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Legal */}
+              {/* Contact Info */}
               <div>
-                <h4 className="text-[1.15rem] lg:text-[1.2rem] font-bold mb-3 md:mb-4 text-secondary-200">
-                  Legal
-                </h4>
-                <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
-                  <li>
-                    <Link
-                      to="/legal-team"
-                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
-                    >
-                      Our Legal Team
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
-                    >
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
-                    >
-                      Terms of Service
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
-                    >
-                      Cookie Policy
-                    </a>
-                  </li>
-                </ul>
+                <div className="space-y-3 text-[1.05rem] lg:text-[1.15rem]">
+                  <div>
+                    <p className="text-gray-400 text-[1.1rem] lg:text-[1.2rem]">
+                      Westlands Business Centre
+                      <br />
+                      Nairobi, Kenya
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-gray-400 text-[1.1rem] lg:text-[1.2rem]">
+                      info@obelassociates.co.ke
+                      <br />
+                      consultation@obelassociates.co.ke
+                    </p>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <p className="text-gray-400 font-semibold mb-1">Call Us:</p>
+                    <p className="text-gray-400">
+                      +254 700 000 000
+                      <br />
+                      +254 20 000 0000
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

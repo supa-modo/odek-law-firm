@@ -102,7 +102,7 @@ const AboutSection = () => {
                 return (
                   <div
                     key={index}
-                    className={`group relative p-4 lg:p-2 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-white/50 backdrop-blur-sm  lg:bg-transparent lg:backdrop-blur-none ${borderClasses} lg:border-r-2 lg:border-r-slate-200/50 lg:border-l-0 lg:border-t-0 lg:border-b-0`}
+                    className={`group relative p-4 lg:p-2 bg-white/50 backdrop-blur-sm  lg:bg-transparent lg:backdrop-blur-none ${borderClasses} lg:border-r-2 lg:border-r-slate-200/50 lg:border-l-0 lg:border-t-0 lg:border-b-0`}
                   >
                     {/* Connecting line for mobile (except last item) */}
                     {index < practiceAreas.length - 1 && (
@@ -120,7 +120,7 @@ const AboutSection = () => {
                           <area.icon className="w-10 h-10 md:w-10 md:h-10 text-secondary-700" />
                         </div>
                       </div>
-                      <h3 className="text-[1.35rem] md:text-2xl font-extrabold text-burgundy leading-tight line-clamp-2">
+                      <h3 className="text-[1.35rem] md:text-2xl font-extrabold text-secondary-800 leading-tight line-clamp-2">
                         {area.title}
                       </h3>
                     </div>

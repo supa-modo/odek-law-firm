@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TbArrowRight, TbChevronDown } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -7,6 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const mobileMenuRef = useRef(null);
 
   // Close mobile menu when clicking outside
@@ -39,6 +40,32 @@ const Header = () => {
     setIsMenuOpen(false);
     setIsPracticeAreasOpen(false);
   }, [location.pathname]);
+
+  // Handle scrolling to contact section
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Check if we have a hash or if we need to scroll to contact
+      if (location.hash === "#contact" || location.state?.scrollToContact) {
+        const scrollToContact = () => {
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        };
+
+        // Try immediate scroll first
+        scrollToContact();
+
+        // Fallback with timeout in case the element isn't ready
+        const timer = setTimeout(scrollToContact, 500);
+
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [location.pathname, location.hash, location.state]);
 
   const practiceAreas = [
     {
@@ -74,7 +101,7 @@ const Header = () => {
     },
     {
       to: "/about",
-      label: "About Us",
+      label: "Our Law Firm",
     },
     {
       to: "/practice-areas",
@@ -104,7 +131,7 @@ const Header = () => {
                   className="w-14 lg:w-16 h-14 lg:h-16 mr-2"
                 />
                 <div>
-                  <h1 className="text-xl lg:text-2xl font-extrabold font-garamond text-burgundy">
+                  <h1 className="text-xl lg:text-2xl font-extrabold font-garamond text-primary-700">
                     Obel & Company Associates
                   </h1>
                   <p className="-mt-1 text-sm lg:text-[0.97rem] text-gray-700 font-semibold">
@@ -124,6 +151,23 @@ const Header = () => {
                     <a
                       href={item.to}
                       className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 font-semibold transition-colors relative group`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (location.pathname === "/") {
+                          // If already on homepage, just scroll to contact section
+                          const contactSection =
+                            document.getElementById("contact");
+                          if (contactSection) {
+                            contactSection.scrollIntoView({
+                              behavior: "smooth",
+                              block: "start",
+                            });
+                          }
+                        } else {
+                          // If not on homepage, navigate to homepage with state to scroll to contact
+                          navigate("/", { state: { scrollToContact: true } });
+                        }
+                      }}
                     >
                       {item.label}
                       <div
@@ -226,7 +270,7 @@ const Header = () => {
                   )}
                 </React.Fragment>
               ))}
-              <button className="bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2">
+              <button className="bg-primary-700 hover:bg-primary-800 text-white px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">Free Consultations</span>
                   <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -298,7 +342,24 @@ const Header = () => {
                       <a
                         href={item.to}
                         className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-[1.1rem] font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsMenuOpen(false);
+                          if (location.pathname === "/") {
+                            // If already on homepage, just scroll to contact section
+                            const contactSection =
+                              document.getElementById("contact");
+                            if (contactSection) {
+                              contactSection.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                              });
+                            }
+                          } else {
+                            // If not on homepage, navigate to homepage with state to scroll to contact
+                            navigate("/", { state: { scrollToContact: true } });
+                          }
+                        }}
                       >
                         {item.label}
                       </a>
@@ -383,7 +444,7 @@ const Header = () => {
                 transition={{ delay: 0.4 }}
                 className="px-2"
               >
-                <button className="mb-3 bg-burgundy text-white px-6 py-2 font-garamond text-lg group hover:opacity-90 transition-opacity font-medium w-full mt-2">
+                <button className="mb-3 bg-primary-700 text-white px-6 py-2 font-garamond text-lg group hover:opacity-90 transition-opacity font-medium w-full mt-2">
                   <div className="flex items-center gap-2 justify-center">
                     <span className="font-semibold">Free Consultations</span>
                     <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

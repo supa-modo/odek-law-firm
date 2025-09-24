@@ -338,7 +338,7 @@ const LegalTeamPage = () => {
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
                 </span>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-4 mb-6">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary-700 mt-4 mb-6">
                   Ready to Get Started?
                 </h3>
                 <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-8">
@@ -347,7 +347,7 @@ const LegalTeamPage = () => {
                   achieve the best possible outcome.
                 </p>
                 <div className="flex flex-col md:flex-row gap-4">
-                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-2.5 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                  <button className="w-full bg-primary-700 hover:bg-primary-800 text-white px-6 py-2.5 font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                     <span className="flex items-center justify-center gap-3">
                       <span>Talk To A Legal Expert</span>
                       <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -493,7 +493,7 @@ const LegalTeamPage = () => {
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-extrabold uppercase tracking-wider text-secondary-700">
                   GET LEGAL HELP
                 </span>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-burgundy mt-2 mb-3">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary-700 mt-2 mb-3">
                   Ready to Get Started?
                 </h3>
                 <p className="text-slate-800 font-medium text-[1.1rem] lg:text-xl leading-relaxed mb-5">
@@ -502,7 +502,7 @@ const LegalTeamPage = () => {
                   achieve the best possible outcome.
                 </p>
                 <div className="flex flex-col md:flex-row gap-2.5 md:gap-3 lg:gap-4">
-                  <button className="w-full bg-burgundy hover:bg-burgundy/80 text-white px-6 py-3 font-bold lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                  <button className="w-full bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 font-bold lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                     <span className="flex items-center justify-center gap-3">
                       <span>Talk To A Legal Expert</span>
                       <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -586,7 +586,7 @@ const LegalTeamPage = () => {
                 their most important legal matters
               </p>
               <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center">
-                <button className="bg-burgundy hover:bg-burgundy/80 text-white px-8 py-2.5 font-semibold tracking-wide border border-burgundy text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
+                <button className="bg-primary-700 hover:bg-primary-800 text-white px-8 py-2.5 font-semibold tracking-wide border border-primary-700 text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl group">
                   <span className="flex items-center justify-center gap-3">
                     <span>Schedule Consultation</span>
                     <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

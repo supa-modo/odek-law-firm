@@ -207,63 +207,15 @@ const ClientSuccessSection = () => {
       </div>
 
       <div className="max-w-[95%] mx-auto md:px-3 lg:px-14 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center mb-4">
+        {/* Success Stories */}
+        <div className="mb-10">
+          <div className="inline-flex items-center mb-6">
             <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
-            <span className="text-sm md:text-base font-bold uppercase tracking-wider text-secondary-700">
-              CLIENT SUCCESS
+            <span className="text-2xl md:text-3xl font-bold text-slate-800 relative">
+              Some Success Stories
             </span>
             <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-            Proven Results & Client Satisfaction
-          </h2>
-          <p className="text-lg lg:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
-            Our track record speaks for itself. Discover how we've helped
-            clients achieve successful outcomes across various legal matters
-            with dedication and expertise.
-          </p>
-        </div>
-
-        {/* Achievement Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 mb-12">
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-row lg:flex-col items-center justbetween lg:justify-center  text-center p-3 py-4 md:p-3.5 lg:p-4 bg-white/60 backdrop-blur-sm border border-slate-200/50 "
-            >
-              <div className="w-[35%] flex justify-start lg:justify-center lg:mb-3">
-                <div className="hidden lg:flex w-14 h-14 bg-burgundy/10 rounded-full items-center justify-center">
-                  <achievement.icon className="w-8 h-8 text-burgundy" />
-                </div>
-                <div className="lg:hidden ">
-                  <achievement.icon className="w-11 h-11 text-burgundy" />
-                </div>
-              </div>
-              <div className="w-[65%]">
-                <div className="text-2xl md:text-3xl font-bold text-slate-800 mb-0.5 md:mb-1">
-                  {achievement.number}
-                </div>
-                <div className="text-sm md:text-base text-slate-600 font-medium">
-                  {achievement.label}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Success Stories */}
-        <div className="mb-10">
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 pl-4 md:pl-8 lg:pl-12 relative">
-            <span className="relative">
-              Our Success Stories
-              <div className="absolute -bottom-2 left-12 transform -translate-x-1/2 w-20 h-1 bg-burgundy rounded-full"></div>
-            </span>
-          </h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (

@@ -81,7 +81,7 @@ const WhyChooseUsSection = () => {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button className="w-full hover:cursor-pointer bg-secondary-600 hover:bg-secondary-600 text-burgundy px-6 py-2.5 font-bold text-lg lg:text-[1.2rem] transition-colors duration-200 shadow-lg hover:shadow-xl">
+              <button className="w-full hover:cursor-pointer bg-secondary-700 hover:bg-secondary-600 text-white px-6 py-2.5 font-bold text-lg lg:text-[1.2rem] transition-colors duration-200 shadow-lg hover:shadow-xl">
                 <div className="flex items-center justify-center gap-2">
                   <span>Talk To A Legal Expert</span>
                   <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

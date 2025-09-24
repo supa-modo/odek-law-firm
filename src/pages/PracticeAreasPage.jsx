@@ -161,7 +161,7 @@ const PracticeAreasPage = () => {
                     to={`/practice-areas/${area.id}`}
                     className="block h-full"
                   >
-                    <div className="border-2 border-burgundy-900 hover:bg-primary-700 hover:border-primary-600 transition-all duration-500 overflow-hidden h-full py-8 px-4 md:p-6 lg:p-7 text-center group/card flex flex-col">
+                    <div className="border-2 border-primary-600 hover:bg-primary-700 hover:border-primary-600 transition-all duration-500 overflow-hidden h-full py-8 px-4 md:p-6 lg:p-7 text-center group/card flex flex-col">
                       {/* Icon */}
                       <div className="mb-6">
                         <IconComponent className="w-12 h-12 text-secondary-700 group-hover/card:text-secondary-500 transition-colors duration-500 mx-auto" />
@@ -178,7 +178,7 @@ const PracticeAreasPage = () => {
                       </p>
 
                       {/* CTA */}
-                      <div className="flex items-center justify-center gap-2 text-burgundy font-bold underline underline-offset-4 text-sm uppercase tracking-wider group-hover/card:text-secondary-500 transition-colors duration-500">
+                      <div className="flex items-center justify-center gap-2 text-primary-700 font-bold underline underline-offset-4 text-sm uppercase tracking-wider group-hover/card:text-secondary-500 transition-colors duration-500">
                         <span>Learn More</span>
                         <TbArrowRight className="w-4 h-4 group-hover/card:translate-x-1 transition-transform duration-500" />
                       </div>
@@ -215,7 +215,7 @@ const PracticeAreasPage = () => {
                   </span>
                 </button>
                 <Link to="/legal-team">
-                  <button className="w-full md:w-auto bg-transparent border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900/10 px-8 py-3 font-semibold text-lg transition-all duration-300">
+                  <button className="w-full md:w-auto bg-transparent border-2 border-secondary-700 text-secondary-800 hover:bg-secondary-900/10 px-8 py-3 font-bold text-lg transition-all duration-300">
                     View Our Legal Team
                   </button>
                 </Link>
