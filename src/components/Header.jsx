@@ -159,7 +159,7 @@ const Header = () => {
                     className={`text-xl lg:text-2xl font-extrabold font-garamond transition-colors duration-300 ${
                       isScrolled || isMenuOpen
                         ? "text-primary-700"
-                        : "text-secondary-400"
+                        : "text-secondary-300"
                     }`}
                   >
                     Obel & Company Associates
