@@ -212,7 +212,7 @@ const ClientSuccessSection = () => {
           <div className="inline-flex items-center mb-6">
             <div className="h-1 w-16 bg-secondary-700 rounded-full mr-4"></div>
             <span className="text-2xl md:text-3xl font-bold text-slate-800 relative">
-              Some Success Stories
+              Our Success Stories
             </span>
             <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
           </div>

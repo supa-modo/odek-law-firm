@@ -6,13 +6,31 @@ import { motion, AnimatePresence } from "framer-motion";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const mobileMenuRef = useRef(null);
 
+  // Handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Check if the click is on the menu button
+      const menuButton = event.target.closest("[data-menu-button]");
+      if (menuButton) {
+        return; // Don't close if clicking the menu button
+      }
+
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target)
@@ -118,7 +136,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled || isMenuOpen
+          ? "bg-white shadow-lg"
+          : "bg-transparent py-3 md:py-4 lg:py-6"
+      }`}
+    >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-14">
         <div className="flex justify-between items-center h-[4.6rem]">
           {/* Logo */}
@@ -131,10 +155,22 @@ const Header = () => {
                   className="w-14 lg:w-16 h-14 lg:h-16 mr-2"
                 />
                 <div>
-                  <h1 className="text-xl lg:text-2xl font-extrabold font-garamond text-primary-700">
+                  <h1
+                    className={`text-xl lg:text-2xl font-extrabold font-garamond transition-colors duration-300 ${
+                      isScrolled || isMenuOpen
+                        ? "text-primary-700"
+                        : "text-white"
+                    }`}
+                  >
                     Obel & Company Associates
                   </h1>
-                  <p className="-mt-1 text-sm lg:text-[0.97rem] text-gray-700 font-semibold">
+                  <p
+                    className={`-mt-1 text-sm lg:text-[0.97rem] font-semibold transition-colors duration-300 ${
+                      isScrolled || isMenuOpen
+                        ? "text-gray-700"
+                        : "text-gray-200"
+                    }`}
+                  >
                     Advocates & Solicitors
                   </p>
                 </div>
@@ -150,7 +186,11 @@ const Header = () => {
                   {item.to.startsWith("/#") ? (
                     <a
                       href={item.to}
-                      className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 font-semibold transition-colors relative group`}
+                      className={`px-3 py-2 font-semibold transition-colors relative group ${
+                        isScrolled || isMenuOpen
+                          ? "text-gray-500 hover:text-burgundy-900"
+                          : "text-white hover:text-secondary-300"
+                      }`}
                       onClick={(e) => {
                         e.preventDefault();
                         if (location.pathname === "/") {
@@ -171,7 +211,11 @@ const Header = () => {
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-burgundy-900 group-hover:w-full transition-all duration-300 ease-out`}
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+                          isScrolled || isMenuOpen
+                            ? "bg-burgundy-900"
+                            : "bg-secondary-300"
+                        } group-hover:w-full transition-all duration-300 ease-out`}
                       ></div>
                     </a>
                   ) : item.label === "Practice Areas" ? (
@@ -181,7 +225,11 @@ const Header = () => {
                       onMouseLeave={() => setIsPracticeAreasOpen(false)}
                     >
                       <button
-                        className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group relative ${
+                        className={`px-3 py-2 uppercase font-semibold transition-colors flex items-center gap-2 group relative ${
+                          isScrolled || isMenuOpen
+                            ? "text-gray-500 hover:text-burgundy-900"
+                            : "text-white hover:text-secondary-300"
+                        } ${
                           location.pathname === item.to
                             ? "text-secondary-700"
                             : ""
@@ -251,7 +299,11 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.to}
-                      className={`text-gray-500 hover:text-burgundy-900 px-3 py-2 font-semibold transition-colors duration-300 relative group ${
+                      className={`px-3 py-2 font-semibold transition-colors duration-300 relative group ${
+                        isScrolled || isMenuOpen
+                          ? "text-gray-500 hover:text-burgundy-900"
+                          : "text-white hover:text-secondary-300"
+                      } ${
                         location.pathname === item.to
                           ? "text-secondary-700"
                           : ""
@@ -259,7 +311,11 @@ const Header = () => {
                     >
                       {item.label}
                       <div
-                        className={`absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-700 group-hover:bg-burgundy-900 group-hover:w-full transition-all duration-500 ease-out ${
+                        className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+                          isScrolled || isMenuOpen
+                            ? "bg-secondary-700 group-hover:bg-burgundy-900"
+                            : "bg-secondary-500 group-hover:bg-secondary-300"
+                        } group-hover:w-full transition-all duration-500 ease-out ${
                           location.pathname === item.to ? "w-full" : ""
                         }`}
                       ></div>
@@ -270,7 +326,13 @@ const Header = () => {
                   )}
                 </React.Fragment>
               ))}
-              <button className="bg-primary-700 hover:bg-primary-800 text-white px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2">
+              <button
+                className={`px-6 py-2 font-garamond text-lg group transition-colors duration-300 font-medium flex items-center gap-2 ${
+                  isScrolled || isMenuOpen
+                    ? "bg-primary-700 hover:bg-primary-800 text-white"
+                    : "bg-secondary-700 hover:bg-secondary-800 text-white"
+                }`}
+              >
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">Free Consultations</span>
                   <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -282,11 +344,21 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
+              data-menu-button
               onClick={(e) => {
                 e.stopPropagation();
-                setIsMenuOpen(!isMenuOpen);
+                if (isMenuOpen) {
+                  setIsMenuOpen(false);
+                  setIsPracticeAreasOpen(false);
+                } else {
+                  setIsMenuOpen(true);
+                }
               }}
-              className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 p-1.5 rounded-sm"
+              className={`p-1.5 rounded-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 transition-colors duration-300 ${
+                isScrolled || isMenuOpen
+                  ? "text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+                  : "text-white hover:text-gray-200 hover:bg-white/10"
+              }`}
             >
               <svg
                 className="h-7 w-7"
