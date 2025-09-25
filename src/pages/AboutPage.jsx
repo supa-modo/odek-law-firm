@@ -195,14 +195,14 @@ const AboutPage = () => {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
+              className="space-y-6 lg:col-span-1 lg:w-[40%]"
             >
               <div>
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-primary-600">
@@ -228,27 +228,6 @@ const AboutPage = () => {
                 challenges. We believe that every client deserves personalized
                 attention and the highest quality representation.
               </p>
-
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <TbCloverFilled className="text-secondary-700 w-5 h-5" />
-                  <span className="text-slate-700 font-semibold text-[1.1rem]">
-                    Committed to Client Success
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <TbCloverFilled className="text-secondary-700 w-5 h-5" />
-                  <span className="text-slate-700 font-semibold text-[1.1rem]">
-                    Innovative Legal Solutions
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <TbCloverFilled className="text-secondary-700 w-5 h-5" />
-                  <span className="text-slate-700 font-semibold text-[1.1rem]">
-                    Community-Focused Approach
-                  </span>
-                </div>
-              </div>
             </motion.div>
 
             {/* Image */}
@@ -257,11 +236,11 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative lg:w-[60%]"
             >
-              <div className="relative overflow-hidden rounded-lg shadow-2xl">
+              <div className="relative overflow-hidden shadow-2xl">
                 <img
-                  src="/courtroom4.jpg"
+                  src="/hammer00.jpg"
                   alt="Our Legal Team"
                   className="w-full h-96 lg:h-[500px] object-cover"
                 />
@@ -387,8 +366,18 @@ const AboutPage = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-20 bg-slate-900 relative">
-        <div className="max-w-screen-2xl mx-auto px-6 lg:px-14">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-100/80 to-slate-200/80 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url(/lawyer.jpg)",
+              filter: "blur(2px)",
+            }}
+          ></div>
+        </div>
+        <div className="max-w-screen-2xl py-16 mx-auto px-6 lg:px-14">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -397,17 +386,17 @@ const AboutPage = () => {
             className="mb-12 lg:mb-16"
           >
             <div className="mb-4">
-              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-slate-400">
+              <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-primary-600">
                 OUR CORE VALUES
               </span>
             </div>
             <div className="flex items-center mb-6">
-              <div className="w-1 h-12 bg-secondary-500 mr-4"></div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              <div className="w-1 h-12 bg-secondary-600 mr-4"></div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-600/80">
                 What We Stand For
               </h2>
             </div>
-            <p className="text-lg md:text-xl lg:text-2xl text-slate-300 max-w-4xl leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-700 max-w-4xl leading-relaxed">
               At Obel & Company Associates, we understand that choosing the
               right legal representation is crucial for achieving successful
               outcomes in your legal matters. We firmly believe that our firm
@@ -446,7 +435,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
 
       <Footer />
     </div>

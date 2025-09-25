@@ -236,7 +236,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-[95%] lg:max-w-[90%] mx-auto md:px-6 lg:px-10 w-full">
+      <div className="relative z-20 max-w-[95%] lg:max-w-[85%] mx-auto md:px-6 lg:px-10 w-full">
         <div className=" h-full py-12">
           {/* Left Side - Text Content with Smooth Transitions */}
           <div className="text-left">
@@ -283,17 +283,6 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex gap-4">
-              {/* <button
-                className="bg-secondary-700 hover:bg-secondary-800 group text-white px-4 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-secondary-600/30 hover:cursor-pointer"
-                onMouseEnter={() => setIsAutoPlaying(false)}
-                onMouseLeave={() => setIsAutoPlaying(true)}
-              >
-                <span className="flex items-center justify-center gap-3">
-                  <TbPhoneCall className="w-5 h-5 hidden md:block" />
-                  <span className="">Book an Appointment</span>
-                  <TbArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button> */}
               <button
                 onClick={() => {
                   navigate("/practice-areas");
