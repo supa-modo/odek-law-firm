@@ -292,17 +292,7 @@ const ContactSection = () => {
               aria-label="Interactive map showing the location of Obel & Company Associates law firm office in Westlands Business Centre, Nairobi, Kenya"
               sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             />
-            {/* Fallback link for when map doesn't load */}
-            {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-lg">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Westlands+Business+Centre+Nairobi+Kenya+Obel+Company+Associates"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-              >
-                Open in Google Maps
-              </a>
-            </div> */}
+           
           </div>
         </div>
       </div>

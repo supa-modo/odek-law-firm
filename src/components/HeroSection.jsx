@@ -299,12 +299,13 @@ const HeroSection = () => {
                 onClick={() => {
                   navigate("/practice-areas");
                 }}
-                className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-10 md:px-14 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all hover:cursor-pointer duration-300 transform backdrop-blur-sm"
+                className="border-2 border-white/30 hover:border-primary-500 text-white hover:text-primary-400 px-6 md:px-8 py-2.5 md:py-3 text-base md:text-lg lg:text-xl font-semibold transition-all hover:cursor-pointer duration-300 transform backdrop-blur-sm"
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => setIsAutoPlaying(true)}
               >
-                <span className="flex items-center justify-center gap-3">
-                  <span className="">Our Legal Services</span>
+                <span className="flex items-center justify-center gap-3 lg:gap-4">
+                  <span className="">Explore Our Legal Services</span>
+                  <TbArrowRight className="w-5 h-5" />
                 </span>
               </button>
             </div>
