@@ -292,7 +292,7 @@ const HeroSection = () => {
                 onMouseLeave={() => setIsAutoPlaying(true)}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="">Explore Our Services</span>
+                  <span className="">Our Legal Services</span>
                 </span>
               </button>
             </div>
