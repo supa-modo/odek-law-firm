@@ -259,7 +259,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="pb-12 md:py-20  bg-secondary-900  relative">
+      <section className="py-12 md:py-20  bg-secondary-900  relative">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Left Column - Main Content */}
