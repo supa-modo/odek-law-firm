@@ -182,7 +182,7 @@ const AboutPage = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-100 to-slate-200 relative">
+      <section className="pt-10 md:py-10 lg:py-14 bg-gradient-to-br from-slate-100 to-slate-200 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div
@@ -194,7 +194,7 @@ const AboutPage = () => {
           ></div>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto px-6 lg:px-14 relative z-10">
+        <div className="max-w-screen-2xl mx-auto md:px-6 lg:px-14 relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Text Content */}
             <motion.div
@@ -202,7 +202,7 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 lg:col-span-1 lg:w-[40%]"
+              className="space-y-6 lg:col-span-1 lg:w-[40%] px-3 md:px-0"
             >
               <div>
                 <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-primary-600">
@@ -259,7 +259,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-20  bg-secondary-900  relative">
+      <section className="pb-12 md:py-20  bg-secondary-900  relative">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Left Column - Main Content */}
@@ -366,7 +366,7 @@ const AboutPage = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-100/80 to-slate-200/80 relative">
+      <section className="py-8 md:py-12 lg:py-20 bg-gradient-to-br from-slate-100/80 to-slate-200/80 relative">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div
@@ -377,13 +377,13 @@ const AboutPage = () => {
             }}
           ></div>
         </div>
-        <div className="max-w-screen-2xl py-16 mx-auto px-6 lg:px-14">
+        <div className="max-w-screen-2xl py-16 mx-auto px-2.5 md:px-6 lg:px-14">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="mb-12 lg:mb-16"
+            className="mb-8 md:mb-12 lg:mb-16"
           >
             <div className="mb-4">
               <span className="text-[0.8rem] md:text-sm lg:text-base font-bold uppercase tracking-wider text-primary-600">

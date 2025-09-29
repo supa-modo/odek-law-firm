@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Links Section - Full width on mobile, 4 columns on desktop */}
           <div className="lg:col-span-4">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-3 md:gap-6 lg:gap-8">
               {/* Quick Links */}
               <div>
                 <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
