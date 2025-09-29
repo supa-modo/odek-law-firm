@@ -14,8 +14,9 @@ const Footer = () => {
               <div className="flex items-center justify-center rounded-full py-1.5 px-2 bg-white">
                 <img
                   src="/scales.jpg"
-                  alt="Obel & Company Associates"
+                  alt="Obel & Company Associates - Scales of Justice Logo"
                   className="w-10 lg:w-16 h-10 lg:h-16"
+                  loading="lazy"
                 />
               </div>
 
@@ -56,21 +57,22 @@ const Footer = () => {
 
           {/* Links Section - Full width on mobile, 4 columns on desktop */}
           <div className="lg:col-span-4">
-            <div className="grid grid-cols-2 gap-3 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 gap-2 md:gap-4 lg:gap-8">
               {/* Quick Links */}
               <div>
                 <ul className="space-y-2 text-[1.1rem] lg:text-[1.2rem]">
                   <li>
                     <a
-                      href="#home"
+                      href="/home"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       Home
                     </a>
                   </li>
+
                   <li>
                     <a
-                      href="#about"
+                      href="/about"
                       className="text-gray-400 hover:text-secondary-400 transition-colors duration-300"
                     >
                       About Us

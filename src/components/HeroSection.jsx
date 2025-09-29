@@ -127,6 +127,8 @@ const HeroSection = () => {
       className="relative h-[75vh] md:h-[82vh] flex items-center overflow-hidden pt-[4.6rem]"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      role="banner"
+      aria-label="Hero section showcasing legal services"
     >
       {/* Background Images with CSS Transitions - No Gaps */}
       {/* Mobile Background */}
@@ -135,6 +137,8 @@ const HeroSection = () => {
         style={{
           backgroundImage: `url(${currentData.mobileImage})`,
         }}
+        role="img"
+        aria-label={`Background image: ${currentData.title} - ${currentData.subtitle}`}
       />
 
       {/* Desktop Background */}
@@ -143,12 +147,14 @@ const HeroSection = () => {
         style={{
           backgroundImage: `url(${currentData.desktopImage})`,
         }}
+        role="img"
+        aria-label={`Background image: ${currentData.title} - ${currentData.subtitle}`}
       />
 
       {/* Hidden Preload Elements */}
-      <div className="hidden">
-        <img src={nextData.mobileImage} alt="" />
-        <img src={nextData.desktopImage} alt="" />
+      <div className="hidden" aria-hidden="true">
+        <img src={nextData.mobileImage} alt="" loading="lazy" />
+        <img src={nextData.desktopImage} alt="" loading="lazy" />
       </div>
 
       {/* Professional Overlay */}
@@ -261,12 +267,18 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: "easeInOut" }}
               >
                 {/* Main Heading */}
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                <h1
+                  className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+                  id="hero-title"
+                >
                   {currentData.title}
                 </h1>
 
                 {/* Subtitle */}
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-gray-200 mb-6 md:mb-7 lg:mb-8 leading-relaxed">
+                <h2
+                  className="text-xl md:text-2xl lg:text-3xl font-light text-gray-200 mb-6 md:mb-7 lg:mb-8 leading-relaxed"
+                  aria-describedby="hero-title"
+                >
                   {currentData.subtitle}
                   <br />
                   <span className="text-secondary-300 font-medium">

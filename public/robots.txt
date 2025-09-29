@@ -1,0 +1,34 @@
+# Robots.txt for Obel & Company Associates
+# TODO: Update sitemap URL when final domain is decided
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://obelassociates.co.ke/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Block access to sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /api/
+Disallow: /src/
+
+# Allow important pages
+Allow: /about
+Allow: /practice-areas
+Allow: /legal-team
+Allow: /contact
+
+# Block common spam bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

@@ -21,6 +21,7 @@ import {
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEOHead from "../components/SEOHead";
 import { GiHandcuffs } from "react-icons/gi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
 import { PiBuildingsDuotone } from "react-icons/pi";
@@ -85,8 +86,43 @@ const PracticeAreasPage = () => {
     },
   ];
 
+  // Practice Areas page structured data
+  const practiceAreasSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Legal Services",
+    provider: {
+      "@type": "LegalService",
+      name: "Obel & Company Associates",
+      url: "https://obelassociates.co.ke",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Legal Practice Areas",
+      itemListElement: practiceAreas.map((area, index) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: area.title,
+          description: area.description,
+          serviceType: area.title,
+        },
+        position: index + 1,
+      })),
+    },
+  };
+
   return (
     <div className="w-full overflow-x-hidden">
+      <SEOHead
+        title="Practice Areas - Expert Legal Services | Obel & Company Associates Kenya"
+        description="Comprehensive legal services across 8 practice areas: Corporate Law, Real Estate, Family Law, Criminal Defense, Employment Law, Tax Law, Civil Litigation & Banking Law. Expert lawyers in Kenya."
+        keywords="legal practice areas Kenya, corporate law Kenya, real estate lawyers Kenya, family law attorneys Kenya, criminal defense lawyers Kenya, employment law Kenya, tax lawyers Kenya, civil litigation Kenya, banking law Kenya"
+        canonicalUrl="/practice-areas"
+        ogTitle="Legal Practice Areas - Expert Services | Obel & Company Associates"
+        ogDescription="Comprehensive legal expertise across 8 practice areas in Kenya. From corporate law to criminal defense, our experienced lawyers provide expert legal services."
+        structuredData={practiceAreasSchema}
+      />
       <Header />
 
       {/* Hero Section */}

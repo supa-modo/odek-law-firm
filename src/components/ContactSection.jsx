@@ -36,6 +36,8 @@ const ContactSection = () => {
     <section
       id="contact"
       className="pt-16 md:pt-20 lg:pt-24 bg-gradient-to-br from-slate-100 to-slate-200 relative"
+      role="region"
+      aria-labelledby="contact-heading"
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -59,7 +61,10 @@ const ContactSection = () => {
               </span>
               <div className="h-1 w-16 bg-secondary-700 rounded-full ml-4"></div>
             </div>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-1.5 md:mb-3 lg:mb-4 leading-tight">
+            <h2
+              id="contact-heading"
+              className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-1.5 md:mb-3 lg:mb-4 leading-tight"
+            >
               Ready to Discuss Your Legal Needs?
             </h2>
             <p className="text-[1.15rem] lg:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
@@ -272,17 +277,32 @@ const ContactSection = () => {
           <p className="max-w-[97%] lg:max-w-[90%] mx-auto text-[1.1rem] md:text-lg lg:text-[1.4rem] text-slate-600 mb-2 lg:mb-4">
             We are located in the Westlands Business Centre, Nairobi, Kenya.
           </p>
-          <div className="w-full h-[36rem] bg-slate-200 rounded-lg overflow-hidden">
+          <div className="w-full h-[36rem] bg-slate-200 rounded-lg overflow-hidden relative">
+            {/* TODO: Replace with actual Google Maps embed URL from Google Maps / Share / Embed a map */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8089!2d36.8065!3d-1.2644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1734a4b4b4b4%3A0x4b4b4b4b4b4b4b4b!2sWestlands%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1234567890123!5m2!1sen!2ske"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8757!2d36.8064953!3d-1.2580654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f15a6a42ff23b%3A0xccf7c9d76bd7da92!2sWestlands%20Business%20Centre%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1698765432109!5m2!1sen!2ske"
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen={true}
+              
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location"
-            ></iframe>
+              title="Obel & Company Associates Office Location - Westlands Business Centre, Nairobi, Kenya"
+              aria-label="Interactive map showing the location of Obel & Company Associates law firm office in Westlands Business Centre, Nairobi, Kenya"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            />
+            {/* Fallback link for when map doesn't load */}
+            {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-lg">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Westlands+Business+Centre+Nairobi+Kenya+Obel+Company+Associates"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+              >
+                Open in Google Maps
+              </a>
+            </div> */}
           </div>
         </div>
       </div>

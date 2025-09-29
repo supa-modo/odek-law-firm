@@ -1,0 +1,27 @@
+{
+  "name": "Obel & Company Associates - Expert Legal Services",
+  "short_name": "Obel & Associates",
+  "description": "Leading law firm in Kenya providing expert legal services with over 25 years of experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/scales.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/scales.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "legal", "professional"],
+  "lang": "en-KE",
+  "dir": "ltr"
+}

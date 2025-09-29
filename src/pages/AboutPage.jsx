@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEOHead from "../components/SEOHead";
 
 const AboutPage = () => {
   const [openSection, setOpenSection] = useState(0);
@@ -135,8 +136,50 @@ const AboutPage = () => {
     },
   ];
 
+  // About page structured data
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    mainEntity: {
+      "@type": "LegalService",
+      name: "Obel & Company Associates",
+      description:
+        "Leading law firm in Kenya with over 25 years of experience providing expert legal services across multiple practice areas.",
+      foundingDate: "1999",
+      url: "https://obelassociates.co.ke/about",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Westlands Business Centre",
+        addressLocality: "Nairobi",
+        addressCountry: "Kenya",
+        postalCode: "00100",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Kenya",
+      },
+      serviceType: [
+        "Corporate Law",
+        "Real Estate Law",
+        "Family Law",
+        "Criminal Defense",
+        "Employment Law",
+        "Tax Law",
+      ],
+    },
+  };
+
   return (
     <div className="w-full overflow-x-hidden">
+      <SEOHead
+        title="About Obel & Company Associates - Leading Law Firm in Kenya | 25+ Years Experience"
+        description="Learn about Obel & Company Associates, Kenya's premier law firm with over 25 years of experience. Discover our values, expertise, and commitment to delivering exceptional legal services across multiple practice areas."
+        keywords="about Obel Associates, Kenya law firm history, experienced lawyers Kenya, legal expertise Kenya, law firm values, professional legal services Kenya, established law firm Nairobi"
+        canonicalUrl="/about"
+        ogTitle="About Obel & Company Associates - Leading Law Firm in Kenya"
+        ogDescription="Discover Kenya's premier law firm with over 25 years of experience delivering exceptional legal services. Learn about our values, expertise, and commitment to client success."
+        structuredData={aboutPageSchema}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -241,8 +284,9 @@ const AboutPage = () => {
               <div className="relative overflow-hidden shadow-2xl">
                 <img
                   src="/hammer00.jpg"
-                  alt="Our Legal Team"
+                  alt="Professional Legal Team at Work - Expert Lawyers and Attorneys at Obel & Company Associates"
                   className="w-full h-96 lg:h-[500px] object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">

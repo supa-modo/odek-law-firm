@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -20,7 +21,7 @@ import { Analytics } from "@vercel/analytics/react";
 // Main App Component
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <Analytics />
       <ScrollToTop />
       <Routes>
@@ -56,7 +57,7 @@ function App() {
         {/* Legal Team Page */}
         <Route path="/legal-team" element={<LegalTeamPage />} />
       </Routes>
-    </>
+    </HelmetProvider>
   );
 }
 

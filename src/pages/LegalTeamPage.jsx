@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEOHead from "../components/SEOHead";
 import { FaClover } from "react-icons/fa6";
 
 const LegalTeamPage = () => {
@@ -128,8 +129,36 @@ const LegalTeamPage = () => {
     },
   ];
 
+  // Legal Team page structured data
+  const legalTeamSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Obel & Company Associates",
+    employee: lawyers.map((lawyer) => ({
+      "@type": "Person",
+      name: lawyer.name,
+      jobTitle: lawyer.position,
+      worksFor: {
+        "@type": "LegalService",
+        name: "Obel & Company Associates",
+      },
+      knowsAbout: lawyer.specialization,
+      description: lawyer.description,
+      alumniOf: lawyer.education,
+    })),
+  };
+
   return (
     <div className="w-full overflow-x-hidden">
+      <SEOHead
+        title="Our Legal Team - Expert Lawyers & Attorneys | Obel & Company Associates Kenya"
+        description="Meet our experienced legal team of expert lawyers and attorneys in Kenya. 25+ years combined experience in corporate law, criminal defense, family law, property law, and more."
+        keywords="legal team Kenya, expert lawyers Kenya, experienced attorneys Kenya, law firm partners Kenya, legal professionals Nairobi, qualified lawyers Kenya, legal expertise"
+        canonicalUrl="/legal-team"
+        ogTitle="Expert Legal Team - Experienced Lawyers | Obel & Company Associates"
+        ogDescription="Meet our team of experienced lawyers and legal professionals in Kenya. Expert attorneys with 25+ years combined experience across multiple practice areas."
+        structuredData={legalTeamSchema}
+      />
       <Header />
 
       {/* Hero Section */}
