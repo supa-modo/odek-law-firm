@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
             <div className="space-y-4 text-lg lg:text-xl text-slate-200 leading-relaxed">
               <p>
                 Our goal is to uphold the principles of justice and fairness
-                while advocating for the best interests of those we represent.cl
+                while advocating for the best interests of those we represent.
                 With a focus on integrity, professionalism, and personalized
                 attention, we strive to be a trusted partner in guiding our
                 clients through their legal challenges.

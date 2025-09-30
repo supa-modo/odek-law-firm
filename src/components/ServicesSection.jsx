@@ -30,7 +30,7 @@ const ServicesSection = () => {
                   className="inline-flex items-center text-red-600 hover:text-secondary-700 font-bold text-base lg:text-xl uppercase tracking-wide group transition-colors duration-300"
                 >
                   <span className="underline underline-offset-4">
-                    NEED LEGAL ADVICE? CONTACT US.
+                    NEED LEGAL ADVICE? CONTACT US
                   </span>
                   <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                     →

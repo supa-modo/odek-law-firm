@@ -87,27 +87,27 @@ const Header = () => {
 
   const practiceAreas = [
     {
-      to: "/practice-areas#corporate",
+      to: "/practice-areas/corporate",
       label: "Corporate & Commercial",
     },
     {
-      to: "/practice-areas#real-estate",
+      to: "/practice-areas/property",
       label: "Real Estate & Property",
     },
     {
-      to: "/practice-areas#employment",
+      to: "/practice-areas/employment",
       label: "Employment & Labour",
     },
     {
-      to: "/practice-areas#family",
+      to: "/practice-areas/family",
       label: "Family Law & Succession",
     },
     {
-      to: "/practice-areas#criminal",
+      to: "/practice-areas/criminal",
       label: "Criminal Law & Litigation",
     },
     {
-      to: "/practice-areas#banking",
+      to: "/practice-areas/banking",
       label: "Banking & Financial",
     },
   ];
