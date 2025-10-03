@@ -133,14 +133,14 @@ const LegalTeamPage = () => {
   const legalTeamSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Obel & Company Associates",
+    name: "Obel & Company Advocates",
     employee: lawyers.map((lawyer) => ({
       "@type": "Person",
       name: lawyer.name,
       jobTitle: lawyer.position,
       worksFor: {
         "@type": "LegalService",
-        name: "Obel & Company Associates",
+        name: "Obel & Company Advocates",
       },
       knowsAbout: lawyer.specialization,
       description: lawyer.description,
@@ -151,11 +151,11 @@ const LegalTeamPage = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <SEOHead
-        title="Our Legal Team - Expert Lawyers & Attorneys | Obel & Company Associates Kenya"
+        title="Our Legal Team - Expert Lawyers & Attorneys | Obel & Company Advocates Kenya"
         description="Meet our experienced legal team of expert lawyers and attorneys in Kenya. 25+ years combined experience in corporate law, criminal defense, family law, property law, and more."
         keywords="legal team Kenya, expert lawyers Kenya, experienced attorneys Kenya, law firm partners Kenya, legal professionals Nairobi, qualified lawyers Kenya, legal expertise"
         canonicalUrl="/legal-team"
-        ogTitle="Expert Legal Team - Experienced Lawyers | Obel & Company Associates"
+        ogTitle="Expert Legal Team - Experienced Lawyers | Obel & Company Advocates"
         ogDescription="Meet our team of experienced lawyers and legal professionals in Kenya. Expert attorneys with 25+ years combined experience across multiple practice areas."
         structuredData={legalTeamSchema}
       />

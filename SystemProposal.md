@@ -1,5 +1,5 @@
 Website Development Proposal
-For: [Obel & Company Associates] – Kenya
+For: [Obel & Company Advocates] – Kenya
 Prepared by: [Your Name / Company]
 Date: [Insert Date]
 

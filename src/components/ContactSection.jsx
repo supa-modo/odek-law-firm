@@ -133,9 +133,9 @@ const ContactSection = () => {
                         Email Address
                       </h4>
                       <p className="text-slate-600 leading-relaxed text-[1.1rem] lg:text-lg">
-                        info@obelassociates.co.ke
+                        info@obeladvocates.co.ke
                         <br />
-                        consultation@obelassociates.co.ke
+                        consultation@obeladvocates.co.ke
                       </p>
                     </div>
                   </div>
@@ -285,14 +285,12 @@ const ContactSection = () => {
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={true}
-              
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Obel & Company Associates Office Location - Westlands Business Centre, Nairobi, Kenya"
-              aria-label="Interactive map showing the location of Obel & Company Associates law firm office in Westlands Business Centre, Nairobi, Kenya"
+              title="Obel & Company Advocates Office Location - Westlands Business Centre, Nairobi, Kenya"
+              aria-label="Interactive map showing the location of Obel & Company Advocates law firm office in Westlands Business Centre, Nairobi, Kenya"
               sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             />
-           
           </div>
         </div>
       </div>

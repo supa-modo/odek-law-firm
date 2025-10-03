@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="flex items-center justify-center rounded-full py-1.5 px-2 bg-white">
                 <img
                   src="/scales.jpg"
-                  alt="Obel & Company Associates - Scales of Justice Logo"
+                  alt="Obel & Company Advocates - Scales of Justice Logo"
                   className="w-10 lg:w-16 h-10 lg:h-16"
                   loading="lazy"
                 />
@@ -22,7 +22,7 @@ const Footer = () => {
 
               <div className="ml-4">
                 <h3 className="text-2xl leading-tight text-white font-bold">
-                  Obel & Company Associates
+                  Obel & Company Advocates
                 </h3>
                 <p className="text-[1.1rem] lg:text-[1.15rem] text-gray-400 font-medium">
                   Advocates & Solicitors
@@ -118,9 +118,9 @@ const Footer = () => {
 
                   <div>
                     <p className="text-gray-400 text-[1.1rem] lg:text-[1.2rem]">
-                      info@obelassociates.co.ke
+                      info@obeladvocates.co.ke
                       <br />
-                      consultation@obelassociates.co.ke
+                      consultation@obeladvocates.co.ke
                     </p>
                   </div>
 
@@ -172,7 +172,7 @@ const Footer = () => {
         {/* Bottom Border and Copyright */}
         <div className="border-t border-primary-600 mt-12 pt-8 text-center">
           <p className="text-gray-400 font-medium">
-            &copy; {new Date().getFullYear()} Obel & Company Associates. All
+            &copy; {new Date().getFullYear()} Obel & Company Advocates. All
             rights reserved. | Advocates & Solicitors of the High Court of Kenya
           </p>
         </div>

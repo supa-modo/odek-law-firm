@@ -93,8 +93,8 @@ const PracticeAreasPage = () => {
     serviceType: "Legal Services",
     provider: {
       "@type": "LegalService",
-      name: "Obel & Company Associates",
-      url: "https://obelassociates.co.ke",
+      name: "Obel & Company Advocates",
+      url: "https://obeladvocates.co.ke",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -115,11 +115,11 @@ const PracticeAreasPage = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <SEOHead
-        title="Practice Areas - Expert Legal Services | Obel & Company Associates Kenya"
+        title="Practice Areas - Expert Legal Services | Obel & Company Advocates Kenya"
         description="Comprehensive legal services across 8 practice areas: Corporate Law, Real Estate, Family Law, Criminal Defense, Employment Law, Tax Law, Civil Litigation & Banking Law. Expert lawyers in Kenya."
         keywords="legal practice areas Kenya, corporate law Kenya, real estate lawyers Kenya, family law attorneys Kenya, criminal defense lawyers Kenya, employment law Kenya, tax lawyers Kenya, civil litigation Kenya, banking law Kenya"
         canonicalUrl="/practice-areas"
-        ogTitle="Legal Practice Areas - Expert Services | Obel & Company Associates"
+        ogTitle="Legal Practice Areas - Expert Services | Obel & Company Advocates"
         ogDescription="Comprehensive legal expertise across 8 practice areas in Kenya. From corporate law to criminal defense, our experienced lawyers provide expert legal services."
         structuredData={practiceAreasSchema}
       />

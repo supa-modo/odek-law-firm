@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const SEOHead = ({
-  title = "Obel & Company Associates - Premier Law Firm in Kenya | Expert Legal Services",
+  title = "Obel & Company Advocates - Premier Law Firm in Kenya | Expert Legal Services",
   description = "Leading law firm in Kenya providing expert legal services in corporate law, real estate, family law, criminal defense, employment law, and tax law. 25+ years of experience. Free consultation available.",
   keywords = "law firm Kenya, lawyers Nairobi, legal services Kenya, advocates solicitors, corporate law Kenya, real estate lawyers, family law attorneys, criminal defense Kenya, employment law, tax law Kenya, legal consultation",
   canonicalUrl,
@@ -18,7 +18,7 @@ const SEOHead = ({
   noFollow = false,
 }) => {
   // TODO: Update base URL when final domain is decided
-  const baseUrl = "https://obelassociates.co.ke";
+  const baseUrl = "https://obeladvocates.co.ke";
   const fullCanonicalUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl;
 
   const robotsContent = `${noIndex ? "noindex" : "index"}, ${
@@ -36,7 +36,7 @@ const SEOHead = ({
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content="Obel & Company Associates" />
+      <meta property="og:site_name" content="Obel & Company Advocates" />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
@@ -48,8 +48,8 @@ const SEOHead = ({
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@obelassociates" />
-      <meta name="twitter:creator" content="@obelassociates" />
+      <meta name="twitter:site" content="@obeladvocates" />
+      <meta name="twitter:creator" content="@obeladvocates" />
       <meta name="twitter:title" content={twitterTitle || ogTitle || title} />
       <meta
         name="twitter:description"

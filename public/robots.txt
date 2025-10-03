@@ -1,11 +1,11 @@
-# Robots.txt for Obel & Company Associates
+# Robots.txt for Obel & Company Advocates
 # TODO: Update sitemap URL when final domain is decided
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://obelassociates.co.ke/sitemap.xml
+Sitemap: https://obeladvocates.co.ke/sitemap.xml
 
 # Crawl delay for polite crawling
 Crawl-delay: 1

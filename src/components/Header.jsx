@@ -151,7 +151,7 @@ const Header = () => {
               <Link to="/" className="flex items-center">
                 <img
                   src="/scales.jpg"
-                  alt="Obel & Company Associates - Scales of Justice Logo"
+                  alt="Obel & Company Advocates - Scales of Justice Logo"
                   className="w-14 lg:w-16 h-14 lg:h-16 mr-2"
                   loading="eager"
                 />
@@ -163,7 +163,7 @@ const Header = () => {
                         : "text-secondary-300"
                     }`}
                   >
-                    Obel & Company Associates
+                    Obel & Company Advocates
                   </h1>
                   <p
                     className={`-mt-1 text-sm lg:text-[0.97rem] font-semibold transition-colors duration-300 ${

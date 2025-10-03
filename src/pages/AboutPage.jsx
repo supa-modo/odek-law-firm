@@ -142,11 +142,11 @@ const AboutPage = () => {
     "@type": "AboutPage",
     mainEntity: {
       "@type": "LegalService",
-      name: "Obel & Company Associates",
+      name: "Obel & Company Advocates",
       description:
         "Leading law firm in Kenya with over 25 years of experience providing expert legal services across multiple practice areas.",
       foundingDate: "1999",
-      url: "https://obelassociates.co.ke/about",
+      url: "https://obeladvocates.co.ke/about",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Westlands Business Centre",
@@ -172,11 +172,11 @@ const AboutPage = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <SEOHead
-        title="About Obel & Company Associates - Leading Law Firm in Kenya | 25+ Years Experience"
-        description="Learn about Obel & Company Associates, Kenya's premier law firm with over 25 years of experience. Discover our values, expertise, and commitment to delivering exceptional legal services across multiple practice areas."
-        keywords="about Obel Associates, Kenya law firm history, experienced lawyers Kenya, legal expertise Kenya, law firm values, professional legal services Kenya, established law firm Nairobi"
+        title="About Obel & Company Advocates - Leading Law Firm in Kenya | 25+ Years Experience"
+        description="Learn about Obel & Company Advocates, Kenya's premier law firm with over 25 years of experience. Discover our values, expertise, and commitment to delivering exceptional legal services across multiple practice areas."
+        keywords="about Obel Advocates, Kenya law firm history, experienced lawyers Kenya, legal expertise Kenya, law firm values, professional legal services Kenya, established law firm Nairobi"
         canonicalUrl="/about"
-        ogTitle="About Obel & Company Associates - Leading Law Firm in Kenya"
+        ogTitle="About Obel & Company Advocates - Leading Law Firm in Kenya"
         ogDescription="Discover Kenya's premier law firm with over 25 years of experience delivering exceptional legal services. Learn about our values, expertise, and commitment to client success."
         structuredData={aboutPageSchema}
       />
@@ -212,7 +212,7 @@ const AboutPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight">
-              Obel & Company Associates
+              Obel & Company Advocates
             </h1>
 
             <p className="text-lg lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -258,10 +258,9 @@ const AboutPage = () => {
 
               <p className="text-slate-700 text-[1.1rem] md:text-[1.15rem] lg:text-xl leading-relaxed">
                 Founded with a vision to provide accessible, high-quality legal
-                services, Obel & Company Associates has grown into one of
-                Kenya's most respected law firms. Our journey began with a
-                simple commitment: to deliver justice and protect our clients'
-                rights.
+                services, Obel & Company Advocates has grown into one of Kenya's
+                most respected law firms. Our journey began with a simple
+                commitment: to deliver justice and protect our clients' rights.
               </p>
 
               <p className="text-slate-700 text-[1.1rem] md:text-[1.15rem] lg:text-xl leading-relaxed">
@@ -284,7 +283,7 @@ const AboutPage = () => {
               <div className="relative overflow-hidden shadow-2xl">
                 <img
                   src="/hammer00.jpg"
-                  alt="Professional Legal Team at Work - Expert Lawyers and Attorneys at Obel & Company Associates"
+                  alt="Professional Legal Team at Work - Expert Lawyers and Attorneys at Obel & Company Advocates"
                   className="w-full h-96 lg:h-[500px] object-cover"
                   loading="lazy"
                 />
@@ -441,10 +440,10 @@ const AboutPage = () => {
               </h2>
             </div>
             <p className="text-lg md:text-xl lg:text-2xl text-slate-700 max-w-4xl leading-relaxed">
-              At Obel & Company Associates, we understand that choosing the
-              right legal representation is crucial for achieving successful
-              outcomes in your legal matters. We firmly believe that our firm
-              stands out from the rest for the following reasons.
+              At Obel & Company Advocates, we understand that choosing the right
+              legal representation is crucial for achieving successful outcomes
+              in your legal matters. We firmly believe that our firm stands out
+              from the rest for the following reasons.
             </p>
           </motion.div>
 

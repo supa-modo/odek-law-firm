@@ -1,8 +1,8 @@
-# SEO Optimization Report - Obel & Company Associates Website
+# SEO Optimization Report - Obel & Company Advocates Website
 
 ## Executive Summary
 
-This document outlines the comprehensive SEO optimizations implemented for the Obel & Company Associates law firm website. The optimizations follow industry best practices and focus on improving search engine visibility, user experience, and accessibility compliance.
+This document outlines the comprehensive SEO optimizations implemented for the Obel & Company Advocates law firm website. The optimizations follow industry best practices and focus on improving search engine visibility, user experience, and accessibility compliance.
 
 ## 🎯 Key Improvements Implemented
 
@@ -107,25 +107,25 @@ This document outlines the comprehensive SEO optimizations implemented for the O
 
 ### Homepage
 
-- **Title**: "Obel & Company Associates - Premier Law Firm in Kenya | Expert Legal Services"
+- **Title**: "Obel & Company Advocates - Premier Law Firm in Kenya | Expert Legal Services"
 - **Focus**: Brand awareness and service overview
 - **Schema**: Organization + LegalService
 
 ### About Page
 
-- **Title**: "About Obel & Company Associates - Leading Law Firm in Kenya | 25+ Years Experience"
+- **Title**: "About Obel & Company Advocates - Leading Law Firm in Kenya | 25+ Years Experience"
 - **Focus**: Firm history, values, and expertise
 - **Schema**: AboutPage + Organization details
 
 ### Practice Areas Page
 
-- **Title**: "Practice Areas - Expert Legal Services | Obel & Company Associates Kenya"
+- **Title**: "Practice Areas - Expert Legal Services | Obel & Company Advocates Kenya"
 - **Focus**: Service listings and expertise areas
 - **Schema**: Service catalog with individual offerings
 
 ### Legal Team Page
 
-- **Title**: "Our Legal Team - Expert Lawyers & Attorneys | Obel & Company Associates Kenya"
+- **Title**: "Our Legal Team - Expert Lawyers & Attorneys | Obel & Company Advocates Kenya"
 - **Focus**: Professional credentials and expertise
 - **Schema**: Person entities for each lawyer
 

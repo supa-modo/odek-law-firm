@@ -199,7 +199,7 @@ const NewsInsightsSection = () => {
               {/* Description */}
               <p className="text-lg lg:text-xl text-slate-600 leading-relaxed">
                 Subscribe to our email list to stay up to date on the latest
-                news and insights from Obel & Company Associates. We share
+                news and insights from Obel & Company Advocates. We share
                 exciting legal wins and exclusive news.
               </p>
 
